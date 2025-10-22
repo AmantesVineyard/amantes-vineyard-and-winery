@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/amantes-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,14 +34,11 @@ const Navigation = () => {
 
           {/* Center Logo */}
           <a href="#home" className="absolute left-1/2 -translate-x-1/2">
-            <div className="text-center">
-              <h1 className="text-2xl lg:text-3xl font-serif tracking-wider text-wine-bronze">
-                LAGAR
-              </h1>
-              <p className="text-[10px] tracking-[0.3em] text-wine-cream/60 uppercase">
-                Live Quality
-              </p>
-            </div>
+            <img 
+              src={logo}
+              alt="Amantes Winery"
+              className="h-12 lg:h-14 w-auto"
+            />
           </a>
 
           {/* Right Nav Items */}

@@ -1,3 +1,5 @@
+import logo from "@/assets/amantes-logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-wine-deep border-t border-wine-slate py-12">
@@ -5,8 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-serif text-wine-bronze mb-2">LAGAR</h3>
-            <p className="text-xs tracking-[0.3em] text-wine-cream/60 uppercase">Live Quality</p>
+            <img 
+              src={logo}
+              alt="Amantes Winery"
+              className="h-10 w-auto mx-auto md:mx-0"
+            />
           </div>
 
           {/* Links */}
