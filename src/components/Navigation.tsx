@@ -1,0 +1,93 @@
+import { useState } from "react";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "HOME", href: "#home" },
+    { name: "WINERY", href: "#winery" },
+    { name: "WINES", href: "#wines" },
+    { name: "CONTACT", href: "#contact" },
+    { name: "EXPERIENCES", href: "#experiences" },
+    { name: "SHOP", href: "#shop" },
+  ];
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-wine-deep/95 backdrop-blur-sm border-b border-wine-slate">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Left Nav Items */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.slice(0, 3).map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Center Logo */}
+          <a href="#home" className="absolute left-1/2 -translate-x-1/2">
+            <div className="text-center">
+              <h1 className="text-2xl lg:text-3xl font-serif tracking-wider text-wine-bronze">
+                LAGAR
+              </h1>
+              <p className="text-[10px] tracking-[0.3em] text-wine-cream/60 uppercase">
+                Live Quality
+              </p>
+            </div>
+          </a>
+
+          {/* Right Nav Items */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.slice(3).map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
+            <button className="text-wine-cream/80 hover:text-wine-bronze transition-colors">
+              <ShoppingCart className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-wine-cream z-50"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-8 border-t border-wine-slate">
+            <div className="flex flex-col space-y-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;

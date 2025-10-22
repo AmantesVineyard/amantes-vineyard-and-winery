@@ -13,7 +13,18 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Lato', 'sans-serif'],
+      },
       colors: {
+        wine: {
+          bronze: 'hsl(var(--wine-bronze))',
+          gold: 'hsl(var(--wine-gold))',
+          deep: 'hsl(var(--wine-deep))',
+          slate: 'hsl(var(--wine-slate))',
+          cream: 'hsl(var(--wine-cream))',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
