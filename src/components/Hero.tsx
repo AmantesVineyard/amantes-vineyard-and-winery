@@ -30,8 +30,8 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight drop-shadow-lg">
-            Quality Wine from<br />Organically Grown Grapes
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg">
+            Temecula's only kosher vineyard
           </h1>
         </div>
       </div>
