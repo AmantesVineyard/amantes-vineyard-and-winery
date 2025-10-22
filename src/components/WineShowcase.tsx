@@ -31,7 +31,7 @@ const wines = [
 
 const WineShowcase = () => {
   return (
-    <section id="wines" className="py-24 bg-wine-deep">
+    <section id="wines" className="py-24 bg-wine-cream">
       <div className="container mx-auto px-4">
         {wines.map((wine, index) => (
           <div 
@@ -56,11 +56,11 @@ const WineShowcase = () => {
                 {wine.category}
               </p>
               
-              <h2 className="text-4xl lg:text-5xl font-serif text-wine-cream mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
                 {wine.name}
               </h2>
               
-              <p className="text-lg text-wine-cream/70 mb-8 leading-relaxed max-w-xl">
+              <p className="text-lg text-wine-slate/80 mb-8 leading-relaxed max-w-xl">
                 {wine.description}
               </p>
 

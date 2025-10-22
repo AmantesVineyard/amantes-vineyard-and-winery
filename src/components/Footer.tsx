@@ -2,7 +2,7 @@ import logo from "@/assets/amantes-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-wine-deep border-t border-wine-slate py-12">
+    <footer className="bg-wine-nav border-t border-wine-slate py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}

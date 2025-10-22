@@ -8,41 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 40 20% 95%;
+    --background: 40 20% 96%;
+    --foreground: 0 0% 25%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 40 20% 95%;
+    --card: 40 20% 96%;
+    --card-foreground: 0 0% 25%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 40 20% 96%;
+    --popover-foreground: 0 0% 25%;
 
     --primary: 33 68% 58%;
-    --primary-foreground: 0 0% 10%;
+    --primary-foreground: 40 20% 96%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 40 20% 95%;
+    --secondary: 0 0% 40%;
+    --secondary-foreground: 40 20% 96%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 40 10% 88%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 33 68% 58%;
-    --accent-foreground: 0 0% 10%;
+    --accent-foreground: 40 20% 96%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 40 20% 96%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
     --ring: 33 68% 58%;
 
     --radius: 0rem;
     
     --wine-bronze: 33 68% 58%;
     --wine-gold: 45 90% 65%;
-    --wine-deep: 0 0% 7%;
-    --wine-slate: 0 0% 15%;
-    --wine-cream: 40 20% 95%;
+    --wine-deep: 0 0% 28%;
+    --wine-slate: 0 0% 40%;
+    --wine-cream: 40 20% 96%;
+    --wine-nav: 0 0% 20%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -62,8 +63,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 7%;
-    --foreground: 40 20% 95%;
+    --background: 40 20% 96%;
+    --foreground: 0 0% 25%;
   }
 }
 

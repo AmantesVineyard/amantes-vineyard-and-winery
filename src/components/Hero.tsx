@@ -8,7 +8,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-wine-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-wine-cream/60" />
       </div>
 
       {/* Organic Bottom Border SVG */}
@@ -21,8 +21,8 @@ const Hero = () => {
         >
           <path 
             d="M0,60 C240,90 480,30 720,60 C960,90 1200,30 1440,60 L1440,120 L0,120 Z" 
-            fill="hsl(var(--wine-deep))"
-            opacity="0.95"
+            fill="hsl(var(--wine-cream))"
+            opacity="1"
           />
         </svg>
       </div>

@@ -3,14 +3,14 @@ import { Calendar } from "lucide-react";
 
 const Experience = () => {
   return (
-    <section id="experiences" className="py-24 bg-wine-slate">
+    <section id="experiences" className="py-24 bg-wine-cream">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4">
             Experience
           </p>
-          <h2 className="text-4xl lg:text-5xl font-serif text-wine-cream mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6">
             The Story Behind Our Winery
           </h2>
         </div>
@@ -31,20 +31,20 @@ const Experience = () => {
 
           {/* Content */}
           <div className="w-full lg:w-1/2">
-            <p className="text-lg text-wine-cream/80 leading-relaxed mb-8">
+            <p className="text-lg text-wine-slate/80 leading-relaxed mb-8">
               Guided walking tour through the vineyards in the Valley of Gods and the estate wineries. 
               Experience the art of winemaking from vine to bottle, exploring our historic cellars where 
               tradition meets innovation.
             </p>
 
-            <p className="text-lg text-wine-cream/80 leading-relaxed mb-10">
+            <p className="text-lg text-wine-slate/80 leading-relaxed mb-10">
               Book your tour in advance (minimum 7 adults) which will take place in the heart of our 
               wine country. Discover the passion and craftsmanship that goes into every bottle.
             </p>
 
             <a 
               href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-wine-bronze text-wine-deep font-semibold tracking-wider hover:bg-wine-gold transition-all duration-300 uppercase text-sm group"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-wine-bronze text-white font-semibold tracking-wider hover:bg-wine-gold transition-all duration-300 uppercase text-sm group"
             >
               <Calendar className="w-5 h-5" />
               <span>Book a Tour</span>
@@ -70,12 +70,12 @@ const Experience = () => {
           ].map((feature, index) => (
             <div 
               key={index}
-              className="text-center p-8 bg-wine-deep/50 border border-wine-bronze/20 hover:border-wine-bronze/40 transition-colors duration-300"
+              className="text-center p-8 bg-white/50 border border-wine-bronze/20 hover:border-wine-bronze/40 transition-colors duration-300"
             >
-              <h3 className="text-xl font-serif text-wine-cream mb-4">
+              <h3 className="text-xl font-serif text-wine-deep mb-4">
                 {feature.title}
               </h3>
-              <p className="text-wine-cream/70 leading-relaxed">
+              <p className="text-wine-slate/80 leading-relaxed">
                 {feature.description}
               </p>
             </div>
