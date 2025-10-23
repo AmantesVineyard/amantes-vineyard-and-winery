@@ -10,6 +10,7 @@ const Navigation = () => {
     { name: "HOME", href: "#home" },
     { name: "HISTORY", href: "#history" },
     { name: "WINES", href: "#wines" },
+    { name: "TEAM", href: "#team" },
     { name: "CONTACT", href: "#contact" },
     { name: "ABOUT US", href: "#about" },
     { name: "BUY WINE", href: "#buy-wine" },
@@ -21,7 +22,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Left Nav Items */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.slice(0, 3).map((link) => (
+            {navLinks.slice(0, 4).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -43,7 +44,7 @@ const Navigation = () => {
 
           {/* Right Nav Items */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.slice(3).map((link) => (
+            {navLinks.slice(4).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
