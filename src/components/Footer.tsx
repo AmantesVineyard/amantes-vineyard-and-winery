@@ -1,5 +1,5 @@
-import logo from "@/assets/amantes-logo.png";
-import footerShape from "@/assets/footer-shape.svg";
+import logo from "@/assets/amantes-logo-blue.png";
+import footerShape from "@/assets/footer-shape-2.svg";
 import vineyardBg from "@/assets/vineyard-hero.jpg";
 
 const Footer = () => {
