@@ -29,14 +29,37 @@ const GrapevineSVG = ({ side = "left", className = "" }: GrapevineSVGProps) => {
         transform: isLeft ? 'scaleX(1)' : 'scaleX(-1)'
       }}
     >
-      {/* Main vine stem */}
+      {/* Main vine stem with more organic curves */}
       <path
-        d="M20,0 Q25,100 20,200 Q15,300 20,400 Q25,500 20,600 Q15,700 20,800"
+        d="M20,0 Q35,80 20,160 Q10,240 25,320 Q35,400 20,480 Q10,560 25,640 Q30,720 20,800"
         stroke="hsl(var(--wine-brown))"
         strokeWidth="2"
         fill="none"
         strokeDasharray="800"
         strokeDashoffset={800 - (growth * 8)}
+        style={{ transition: 'stroke-dashoffset 0.3s ease-out' }}
+      />
+      
+      {/* Secondary vine branch for depth */}
+      <path
+        d="M25,100 Q35,150 40,200"
+        stroke="hsl(var(--wine-brown))"
+        strokeWidth="1.5"
+        fill="none"
+        strokeDasharray="100"
+        strokeDashoffset={100 - (growth * 1)}
+        opacity={Math.min(growth / 30, 0.5)}
+        style={{ transition: 'stroke-dashoffset 0.3s ease-out' }}
+      />
+      
+      <path
+        d="M25,400 Q35,450 40,500"
+        stroke="hsl(var(--wine-brown))"
+        strokeWidth="1.5"
+        fill="none"
+        strokeDasharray="100"
+        strokeDashoffset={100 - (growth * 1)}
+        opacity={Math.min(growth / 30, 0.5)}
         style={{ transition: 'stroke-dashoffset 0.3s ease-out' }}
       />
       
