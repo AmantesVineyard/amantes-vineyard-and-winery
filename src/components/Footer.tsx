@@ -20,13 +20,31 @@ const Footer = () => {
             <div>
               <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Explore</h4>
               <ul className="space-y-2">
-                {["Wines", "Buy Wine", "Team", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#wines" className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
+                    Wines
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://amantesvineyard.orderport.net/wines/Our-Wines" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-wine-cream/70 hover:text-wine-bronze transition-colors"
+                  >
+                    Buy Wine
+                  </a>
+                </li>
+                <li>
+                  <a href="#team" className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
