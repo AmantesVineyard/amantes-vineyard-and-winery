@@ -1,8 +1,17 @@
 import logo from "@/assets/amantes-logo.png";
+import footerShape from "@/assets/footer-shape.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-wine-nav border-t border-wine-slate py-12">
+    <footer className="bg-wine-nav relative pt-12 pb-12">
+      {/* Wavy Top Border */}
+      <div className="absolute top-0 left-0 right-0 transform rotate-180">
+        <img 
+          src={footerShape}
+          alt=""
+          className="w-full h-auto"
+        />
+      </div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_2fr] gap-12 mb-12 items-start">
           {/* Brand */}
