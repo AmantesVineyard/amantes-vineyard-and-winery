@@ -46,13 +46,29 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="text-center md:text-right">
+          <div>
             <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Contact</h4>
             <ul className="space-y-2 text-wine-cream/70">
-              <li>40420 Calle Concion</li>
-              <li>Temecula, California, 92592</li>
-              <li>amantes@amantesvineyard.com</li>
-              <li>951-383-2223</li>
+              <li>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=40420+Calle+Concion+Temecula+CA+92592" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-wine-bronze transition-colors"
+                >
+                  40420 Calle Concion<br />Temecula, California, 92592
+                </a>
+              </li>
+              <li>
+                <a href="mailto:amantes@amantesvineyard.com" className="hover:text-wine-bronze transition-colors">
+                  amantes@amantesvineyard.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+19513832223" className="hover:text-wine-bronze transition-colors">
+                  951-383-2223
+                </a>
+              </li>
             </ul>
           </div>
         </div>
