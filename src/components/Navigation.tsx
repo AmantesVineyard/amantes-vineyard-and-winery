@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import logo from "@/assets/amantes-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "HOME", href: "#home" },
-    { name: "HISTORY", href: "#history" },
-    { name: "WINES", href: "#wines" },
-    { name: "TEAM", href: "#team" },
-    { name: "CONTACT", href: "#contact" },
-    { name: "ABOUT US", href: "#about" },
-    { name: "BUY WINE", href: "#buy-wine" },
+    { name: "HOME", href: "/", isRoute: true },
+    { name: "HISTORY", href: "#history", isRoute: false },
+    { name: "WINES", href: "#wines", isRoute: false },
+    { name: "TEAM", href: "#team", isRoute: false },
+    { name: "CONTACT", href: "#contact", isRoute: false },
+    { name: "ABOUT US", href: "/about", isRoute: true },
+    { name: "BUY WINE", href: "#buy-wine", isRoute: false },
   ];
 
   return (
@@ -23,13 +24,23 @@ const Navigation = () => {
           {/* Left Nav Items */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.slice(0, 4).map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
-              >
-                {link.name}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -45,13 +56,23 @@ const Navigation = () => {
           {/* Right Nav Items */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.slice(4).map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
-              >
-                {link.name}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
             <button className="text-wine-cream/80 hover:text-wine-bronze transition-colors">
               <ShoppingCart className="w-5 h-5" />
@@ -72,14 +93,25 @@ const Navigation = () => {
           <div className="lg:hidden py-8 border-t border-wine-slate">
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors"
-                >
-                  {link.name}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
