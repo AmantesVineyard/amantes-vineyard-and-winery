@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroAbout from "@/components/HeroAbout";
 import Footer from "@/components/Footer";
-import cyrusImage from "@/assets/about-images-cyrus.png";
+import generationsImage from "@/assets/about-images-gens.png";
 
 const About = () => {
   return (
@@ -34,8 +34,8 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-wine-slate leading-relaxed">
               <img 
-                src={cyrusImage} 
-                alt="Cyrus the Great" 
+                src={generationsImage} 
+                alt="Four generations of the Nassir family winemakers" 
                 className="float-left mr-6 mb-4 w-64 md:w-80 rounded-lg shadow-lg"
               />
               <p>
