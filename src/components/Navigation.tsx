@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/assets/amantes-logo.png";
 
-const Navigation = () => {
+interface NavigationProps {
+  transparent?: boolean;
+}
+
+const Navigation = ({ transparent = false }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -18,7 +22,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-wine-nav/95 backdrop-blur-sm border-b border-wine-slate/20">
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${transparent ? 'bg-transparent' : 'bg-wine-nav/95 backdrop-blur-sm'} border-b ${transparent ? 'border-transparent' : 'border-wine-slate/20'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Left Nav Items */}

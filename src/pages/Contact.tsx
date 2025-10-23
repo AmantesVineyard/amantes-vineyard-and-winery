@@ -8,14 +8,17 @@ import { Phone, Mail, MapPin } from "lucide-react";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-wine-cream">
-      <Navigation />
+      <Navigation transparent />
       
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - positioned lower */}
         <div 
           className="absolute inset-0 bg-cover bg-center grayscale"
-          style={{ backgroundImage: `url(${heroContactImage})` }}
+          style={{ 
+            backgroundImage: `url(${heroContactImage})`,
+            backgroundPosition: 'center 60%'
+          }}
         />
 
         {/* Organic Bottom Border SVG */}
