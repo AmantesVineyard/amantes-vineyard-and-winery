@@ -1,30 +1,31 @@
-import wineBottle1 from "@/assets/wine-bottle-1.jpg";
-import wineBottle2 from "@/assets/wine-bottle-2.jpg";
+import wineMerlot from "@/assets/wine-bottle-merlot.png";
+import wineCabernet from "@/assets/wine-bottle-cab.png";
+import winePinot from "@/assets/wine-bottle-pn.png";
 import { ArrowRight } from "lucide-react";
 
 const wines = [
   {
     id: 1,
-    image: wineBottle1,
-    category: "Pinot Noir",
-    name: "Sangiovese Sierra Folia",
-    description: "Blueberries are organic grown combined with little wild plums of all colors we pick ourselves along the Snake River that separate Oregon from Idaho.",
+    image: wineMerlot,
+    category: "Merlot",
+    name: "Amantes 2025 Merlot",
+    description: "Our Temecula Valley Merlot is a handcrafted Kosher Reserve showcasing rich, velvety flavors with notes of dark cherry and plum. Smooth tannins and a lingering finish make this an exceptional choice for any occasion.",
     position: "left"
   },
   {
     id: 2,
-    image: wineBottle1,
-    category: "Nebbiolo",
-    name: "Castello di Neive",
-    description: "The generous mid-palate has mouth-filling textual layers with hints of toast and vibrancy to the fruit. The gentle acid balance opens the palate finishing with soft lingering flavours.",
+    image: wineCabernet,
+    category: "Cabernet Sauvignon",
+    name: "Amantes 2025 Cabernet Sauvignon",
+    description: "Bold and structured, our Cabernet Sauvignon features layers of blackcurrant, oak, and spice. This full-bodied wine from Temecula Valley delivers complexity and depth with every sip.",
     position: "right"
   },
   {
     id: 3,
-    image: wineBottle2,
-    category: "Chardonnay",
-    name: "Domaine Prieuré-Roch Blanc",
-    description: "A light yellow in color with a creamy bubbling and an elegant and persistent sparkling. The nose is fragrant and expressive with fruity and floral notes.",
+    image: winePinot,
+    category: "Pinot Noir",
+    name: "Amantes 2025 Pinot Noir",
+    description: "Elegant and refined, our Pinot Noir offers delicate notes of red berries, earth, and subtle oak. Silky smooth with balanced acidity, this wine embodies the essence of California craftsmanship.",
     position: "left"
   }
 ];
