@@ -3,45 +3,58 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Wine, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-buy-wine.png";
+import { useParallax } from "@/hooks/use-parallax";
+import GrapevineSVG from "@/components/GrapevineSVG";
 
 const BuyWine = () => {
+  const parallaxOffset = useParallax(0.5);
+  
   return (
     <div className="min-h-screen bg-wine-cream">
       <Navigation />
       
+      {/* Decorative Grapevines */}
+      <GrapevineSVG side="left" />
+      <GrapevineSVG side="right" />
+      
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Parallax */}
         <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-100"
+          style={{ 
+            backgroundImage: `url(${heroImage})`,
+            transform: `translateY(${parallaxOffset}px)`
+          }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-wine-cream/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-wine-cream/80" />
         </div>
 
-        {/* Organic Bottom Border SVG */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
+        {/* Organic Bottom Border SVG with Animation */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 animate-fade-in">
           <svg 
             viewBox="0 0 1440 120" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-auto"
+            className="w-full h-auto drop-shadow-2xl"
+            preserveAspectRatio="none"
           >
             <path 
               d="M0,60 C240,90 480,30 720,60 C960,90 1200,30 1440,60 L1440,120 L0,120 Z" 
               fill="hsl(var(--wine-cream))"
               opacity="1"
+              className="transition-all duration-700"
             />
           </svg>
         </div>
 
         {/* Content */}
         <div className="relative z-20 h-full flex items-center justify-center">
-          <div className="text-center px-4 max-w-4xl mx-auto">
-            <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4">
+          <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
+            <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 drop-shadow-lg">
               Our Collection
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-6">
               Buy Our Wines
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
