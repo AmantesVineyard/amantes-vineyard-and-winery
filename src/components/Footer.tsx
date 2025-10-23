@@ -1,6 +1,7 @@
 import logo from "@/assets/amantes-logo-blue.png";
 import footerShape from "@/assets/footer-shape-2.svg";
 import vineyardBg from "@/assets/vineyard-hero.jpg";
+import GrapevineSVG from "@/components/GrapevineSVG";
 
 const Footer = () => {
   return (
@@ -8,17 +9,8 @@ const Footer = () => {
       {/* Top Section - Light Background with Content */}
       <div className="bg-wine-cream py-16 pb-32 relative">
         <div className="container mx-auto px-4">
-          {/* Logo */}
-          <div className="flex justify-center mb-12">
-            <img 
-              src={logo}
-              alt="Amantes Winery"
-              className="w-48 h-auto"
-            />
-          </div>
-
-          {/* Three Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto text-center">
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto text-center mb-16">
             {/* Contact */}
             <div>
               <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">Our Address</h4>
@@ -34,17 +26,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Book/Contact */}
-            <div>
-              <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">Book A Visit</h4>
-              <div className="space-y-2 text-wine-slate">
-                <p>Monday to Saturday</p>
-                <a href="tel:+19513832223" className="hover:text-wine-bronze transition-colors block">
-                  951-383-2223
-                </a>
-              </div>
-            </div>
-
             {/* Distribution */}
             <div>
               <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">Distribution</h4>
@@ -56,6 +37,53 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
+          {/* Logo centered below columns */}
+          <div className="flex justify-center">
+            <img 
+              src={logo}
+              alt="Amantes Winery"
+              className="w-48 h-auto"
+            />
+          </div>
+        </div>
+
+        {/* Decorative Grape Element - positioned on the wavy border */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20">
+          <svg 
+            width="60" 
+            height="80" 
+            viewBox="0 0 60 80" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            className="drop-shadow-md"
+          >
+            {/* Stem */}
+            <path 
+              d="M30 0 L30 15" 
+              stroke="hsl(var(--wine-brown))" 
+              strokeWidth="2"
+            />
+            {/* Leaf */}
+            <ellipse 
+              cx="38" 
+              cy="10" 
+              rx="6" 
+              ry="8" 
+              fill="hsl(var(--wine-bronze))"
+              opacity="0.7"
+            />
+            {/* Grape bunch */}
+            <circle cx="30" cy="25" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="24" cy="32" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="36" cy="32" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="30" cy="39" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="24" cy="46" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="36" cy="46" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="30" cy="53" r="6" fill="hsl(var(--wine-burgundy))" opacity="0.9" />
+            <circle cx="27" cy="60" r="5" fill="hsl(var(--wine-burgundy))" opacity="0.85" />
+            <circle cx="33" cy="60" r="5" fill="hsl(var(--wine-burgundy))" opacity="0.85" />
+          </svg>
         </div>
 
         {/* Wavy Shape Transition */}
