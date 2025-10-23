@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-wine-nav border-t border-wine-slate py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_2fr] gap-12 mb-12">
           {/* Brand */}
           <div className="text-center md:text-left">
             <img 
@@ -14,31 +14,34 @@ const Footer = () => {
             />
           </div>
 
-          {/* Links */}
-          <div>
-            <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Explore</h4>
-            <ul className="space-y-2">
-              {["Wines", "History", "About Us", "Buy Wine"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Navigation Links - Two columns close together */}
+          <div className="flex gap-8">
+            {/* Links */}
+            <div>
+              <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Explore</h4>
+              <ul className="space-y-2">
+                {["Wines", "History", "About Us", "Buy Wine"].map((item) => (
+                  <li key={item}>
+                    <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Additional Links */}
-          <div>
-            <ul className="space-y-2 mt-10">
-              {["Team", "Contact", "Wine Blog"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {/* Additional Links */}
+            <div>
+              <ul className="space-y-2 mt-10">
+                {["Team", "Contact", "Wine Blog"].map((item) => (
+                  <li key={item}>
+                    <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Contact */}
