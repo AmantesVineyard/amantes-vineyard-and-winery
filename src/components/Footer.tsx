@@ -12,7 +12,7 @@ const Footer = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-16">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_2fr] gap-12 mb-12 items-start">
           {/* Brand */}
           <div className="text-center md:text-left">
