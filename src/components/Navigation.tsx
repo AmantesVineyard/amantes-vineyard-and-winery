@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: "HISTORY", href: "/history", isRoute: true },
     { name: "WINES", href: "#wines", isRoute: false },
     { name: "TEAM", href: "#team", isRoute: false },
-    { name: "CONTACT", href: "#contact", isRoute: false },
+    { name: "CONTACT", href: "/contact", isRoute: true },
     { name: "ABOUT US", href: "/about", isRoute: true },
     { name: "BUY WINE", href: "/buy-wine", isRoute: true },
   ];
