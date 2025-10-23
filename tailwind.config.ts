@@ -25,6 +25,8 @@ export default {
           slate: 'hsl(var(--wine-slate))',
           cream: 'hsl(var(--wine-cream))',
           nav: 'hsl(var(--wine-nav))',
+          burgundy: 'hsl(var(--wine-burgundy))',
+          brown: 'hsl(var(--wine-brown))',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
