@@ -32,10 +32,10 @@ const Footer = () => {
           <div>
             <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Contact</h4>
             <ul className="space-y-2 text-wine-cream/70">
-              <li>Valley of Gods</li>
-              <li>Verona, Italy</li>
-              <li>info@lagar.com</li>
-              <li>+39 045 123 4567</li>
+              <li>40420 Calle Concion</li>
+              <li>Temecula, California, 92592</li>
+              <li>amantes@amantesvineyard.com</li>
+              <li>951-383-2223</li>
             </ul>
           </div>
 
