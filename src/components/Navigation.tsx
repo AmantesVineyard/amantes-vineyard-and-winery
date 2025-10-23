@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: "WINERY", href: "#winery" },
     { name: "WINES", href: "#wines" },
     { name: "CONTACT", href: "#contact" },
-    { name: "EXPERIENCES", href: "#experiences" },
+    { name: "ABOUT US", href: "#about" },
     { name: "SHOP", href: "#shop" },
   ];
 
