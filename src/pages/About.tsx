@@ -36,7 +36,7 @@ const About = () => {
               <img 
                 src={generationsImage} 
                 alt="Four generations of the Nassir family winemakers" 
-                className="float-left mr-6 mb-4 w-48 md:w-60 rounded-lg"
+                className="float-left mr-6 mb-8 w-48 md:w-60 rounded-lg"
               />
               <p>
                 The story of Amantes begins over 2,500 years ago, when King Cyrus the Great liberated the Jewish people from Babylon. From that moment, Persian Jews embraced winemaking as both an art and a sacred ritual, producing kosher wine for Shabbat and holidays — a symbol of joy, faith, and gratitude.
