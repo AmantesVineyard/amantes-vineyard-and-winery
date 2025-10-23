@@ -1,6 +1,12 @@
 import Navigation from "@/components/Navigation";
 import HeroHistory from "@/components/HeroHistory";
 import Footer from "@/components/Footer";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const History = () => {
   return (
@@ -345,7 +351,11 @@ const History = () => {
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Modern Iranian Jewish Wineries in California</h3>
           
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Jamshid Winery - Santa Ynez Valley, California</h4>
+            <h4 className="text-xl font-serif text-wine-burgundy mb-3">
+              <a href="https://www.jamshidwine.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-bronze transition-colors">
+                Jamshid Winery
+              </a> - Santa Ynez Valley, California
+            </h4>
             <p className="text-wine-brown mb-3">
               Founded by Dr. Jamshid Maddahi, a Los Angeles cardiologist and UCLA medical school professor, Jamshid Winery explicitly connects to Persian Jewish heritage:
             </p>
@@ -361,9 +371,9 @@ const History = () => {
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
             <h4 className="text-xl font-serif text-wine-burgundy mb-3">Other Iranian-Founded California Wineries:</h4>
             <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li><strong>Maysara Winery</strong> (Willamette Valley, Oregon) - Momtazi family</li>
-              <li><strong>Azari Vineyards</strong> (Petaluma Gap, California) - Kamal and Parichehr Azari</li>
-              <li><strong>Fazeli Cellars</strong> (Temecula, California) - Bizhan Fazeli</li>
+              <li><strong><a href="https://www.maysara.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Maysara Winery</a></strong> (Willamette Valley, Oregon) - Momtazi family</li>
+              <li><strong><a href="https://azarivineyards.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Azari Vineyards</a></strong> (Petaluma Gap, California) - Kamal and Parichehr Azari</li>
+              <li><strong><a href="https://fazelicellars.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Fazeli Cellars</a></strong> (Temecula, California) - Bizhan Fazeli</li>
             </ul>
           </div>
 
@@ -398,79 +408,99 @@ const History = () => {
         <section id="faqs" className="mb-16">
           <h2 className="text-4xl font-serif text-wine-burgundy mb-8">FAQs: Jewish Winemaking in Ancient Persia and Iran</h2>
           
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">How long have Jews been making wine in Persia?</h3>
-              <p className="text-wine-brown leading-relaxed">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                How long have Jews been making wine in Persia?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 Jews have made wine in Persia for approximately 2,700 years, since the Babylonian Exile in 586 BCE. However, Persian wine production predates Jewish arrival by thousands of years, with archaeological evidence dating to 5400-5000 BCE. Jewish winemakers became prominent in Persia by the 9th century CE, particularly in Shiraz.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">What is the connection between Shiraz wine and the Iranian city?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-2" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                What is the connection between Shiraz wine and the Iranian city?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 The city of Shiraz in Iran was historically the wine capital of Persia and gave its name to wines celebrated globally by the 9th century. However, the modern "Shiraz" grape variety used in Australia and elsewhere is actually the Syrah grape from France, with no proven genetic connection to ancient Persian grapes. The naming may reflect historical trade routes and European merchants' exposure to wines from the city of Shiraz.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">Why were Jews the main winemakers in Iran?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-3" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Why were Jews the main winemakers in Iran?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 Under Islamic rule in Persia, Muslims were prohibited from producing alcohol. Jews, not bound by Islamic law, were permitted to make wine for their religious observance and could legally sell wine commercially. This created both religious freedom and economic opportunity, making wine production one of the few trades openly available to Jewish communities throughout Islamic Persia.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">How many wineries existed in Iran before 1979?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-4" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                How many wineries existed in Iran before 1979?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 Historical sources indicate that up to 300 commercial wineries operated in Iran before the 1979 Islamic Revolution. These included Jewish-owned wine factories in Kermanshah, Ahwaz, Shiraz, and other cities. All were shut down, confiscated, or destroyed when the Islamic Republic criminalized alcohol production.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">What happened to Jewish winemakers after the Iranian Revolution?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-5" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                What happened to Jewish winemakers after the Iranian Revolution?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 After the 1979 Islamic Revolution, all Jewish-owned wine businesses were confiscated or destroyed. Tens of thousands of Iranian Jews fled the country, with many settling in Israel, Los Angeles, and other diaspora communities. The Jewish population of Iran declined from 80,000 (1979) to fewer than 10,000 today. Jewish winemaking traditions that had continued for 2,700 years were severed in Iran but are now being revived in California.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">Is wine production legal in Iran today?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-6" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Is wine production legal in Iran today?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 No. Wine production and consumption are illegal in Iran today under Islamic law. Punishments include physical punishment, fines, and imprisonment. While underground production exists, the commercial wine industry that thrived for 7,000 years has been completely eliminated. Former vineyards now grow table grapes instead of wine grapes.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">Where can I find Persian Jewish wines today?</h3>
-              <p className="text-wine-brown leading-relaxed mb-3">
-                Persian Jewish winemaking traditions are being revived in California by Iranian Jewish families. Notable wineries include:
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-wine-brown">
-                <li>Jamshid Winery (Santa Ynez Valley, CA)</li>
-                <li>Maysara Winery (Willamette Valley, OR)</li>
-                <li>Azari Vineyards (Petaluma Gap, CA)</li>
-                <li>Fazeli Cellars (Temecula, CA)</li>
-              </ul>
-              <p className="text-wine-brown leading-relaxed mt-3">
-                These wineries produce kosher and non-kosher wines while honoring ancient Persian Jewish winemaking heritage.
-              </p>
-            </div>
+            <AccordionItem value="item-7" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Where can I find Persian Jewish wines today?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
+                <p className="mb-3">
+                  Persian Jewish winemaking traditions are being revived in California by Iranian Jewish families. Notable wineries include:
+                </p>
+                <ul className="list-disc list-inside space-y-1 mb-3">
+                  <li>Jamshid Winery (Santa Ynez Valley, CA)</li>
+                  <li>Maysara Winery (Willamette Valley, OR)</li>
+                  <li>Azari Vineyards (Petaluma Gap, CA)</li>
+                  <li>Fazeli Cellars (Temecula, CA)</li>
+                </ul>
+                <p>
+                  These wineries produce kosher and non-kosher wines while honoring ancient Persian Jewish winemaking heritage.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">What role does wine play in Jewish Purim celebrations?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-8" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                What role does wine play in Jewish Purim celebrations?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 Wine is central to Purim because the entire story of Esther takes place during wine banquets in the Persian court. The Talmud commands Jews to drink wine on Purim to commemorate the salvation of the Jewish people from Haman's plot. This commandment directly reflects the Persian Jewish wine culture documented in the Book of Esther.
-              </p>
-            </div>
+              </AccordionContent>
+            </AccordionItem>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-serif text-wine-burgundy mb-3">Can I visit a Persian Jewish winery?</h3>
-              <p className="text-wine-brown leading-relaxed">
+            <AccordionItem value="item-9" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Can I visit a Persian Jewish winery?
+              </AccordionTrigger>
+              <AccordionContent className="text-wine-brown leading-relaxed pb-6">
                 Yes! Several California wineries founded by Iranian Jewish families welcome visitors. Contact wineries like Jamshid Winery in Santa Ynez Valley to learn about tours, tastings, and the story of Persian Jewish winemaking traditions continued in California after the 1979 revolution.
-              </p>
-            </div>
-          </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
 
         {/* CTA Section */}
