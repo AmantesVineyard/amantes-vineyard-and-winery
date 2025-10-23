@@ -14,16 +14,6 @@ const BuyWine = () => {
     <div className="min-h-screen bg-wine-cream">
       <Navigation />
       
-      {/* Decorative Grapevines - Side Borders */}
-      <GrapevineSVG side="left" />
-      <GrapevineSVG side="right" />
-      
-      {/* Additional Crisscrossing Vines */}
-      <GrapevineSVG side="left" className="!left-20 md:!left-32 opacity-40" />
-      <GrapevineSVG side="right" className="!right-20 md:!right-32 opacity-40" />
-      <GrapevineSVG side="left" className="!left-40 md:!left-64 opacity-30 hidden lg:block" />
-      <GrapevineSVG side="right" className="!right-40 md:!right-64 opacity-30 hidden lg:block" />
-      
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image with Parallax */}
@@ -61,7 +51,21 @@ const BuyWine = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="py-20 relative">
+        {/* Decorative Vines Around Content */}
+        <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute right-4 top-20 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute left-8 top-[500px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        <div className="absolute right-8 top-[650px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        
         <div className="container mx-auto px-4">
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

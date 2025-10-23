@@ -8,21 +8,24 @@ const About = () => {
   return (
     <div className="min-h-screen bg-wine-cream">
       <Navigation />
-      
-      {/* Decorative Grapevines - Side Borders */}
-      <GrapevineSVG side="left" />
-      <GrapevineSVG side="right" />
-      
-      {/* Additional Crisscrossing Vines */}
-      <GrapevineSVG side="left" className="!left-20 md:!left-32 opacity-40" />
-      <GrapevineSVG side="right" className="!right-20 md:!right-32 opacity-40" />
-      <GrapevineSVG side="left" className="!left-40 md:!left-64 opacity-30 hidden lg:block" />
-      <GrapevineSVG side="right" className="!right-40 md:!right-64 opacity-30 hidden lg:block" />
-      
       <HeroAbout />
       
       {/* Content Sections */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative">
+        {/* Decorative Vines Around Content */}
+        <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute right-4 top-32 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute left-8 top-[600px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        <div className="absolute right-8 top-[800px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        
         <div className="container mx-auto max-w-4xl">
           {/* Introduction */}
           <div className="mb-16">

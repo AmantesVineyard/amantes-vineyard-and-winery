@@ -2,6 +2,7 @@ import wineMerlot from "@/assets/wine-bottle-merlot.png";
 import wineCabernet from "@/assets/wine-bottle-cab.png";
 import winePinot from "@/assets/wine-bottle-pn.png";
 import { ArrowRight } from "lucide-react";
+import GrapevineSVG from "@/components/GrapevineSVG";
 
 const wines = [
   {
@@ -32,7 +33,21 @@ const wines = [
 
 const WineShowcase = () => {
   return (
-    <section id="wines" className="py-24 bg-wine-cream">
+    <section id="wines" className="py-24 bg-wine-cream relative">
+      {/* Decorative Vines Around Wine Showcase */}
+      <div className="absolute left-4 top-20 w-16 h-[500px] pointer-events-none hidden md:block">
+        <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+      </div>
+      <div className="absolute right-4 top-40 w-16 h-[500px] pointer-events-none hidden md:block">
+        <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+      </div>
+      <div className="absolute left-8 top-[600px] w-20 h-96 pointer-events-none hidden lg:block">
+        <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+      </div>
+      <div className="absolute right-8 top-[800px] w-20 h-96 pointer-events-none hidden lg:block">
+        <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+      </div>
+      
       <div className="container mx-auto px-4">
         {wines.map((wine, index) => (
           <div 
