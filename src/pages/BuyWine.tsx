@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ExternalLink, Wine, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-buy-wine.png";
 
 const BuyWine = () => {
   return (
@@ -9,17 +10,44 @@ const BuyWine = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-wine-burgundy to-wine-deep">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4">
-            Our Collection
-          </p>
-          <h1 className="text-5xl lg:text-6xl font-serif text-wine-cream mb-6">
-            Buy Our Wines
-          </h1>
-          <p className="text-lg text-wine-cream/80 max-w-2xl mx-auto">
-            Discover our selection of premium kosher wines, crafted with tradition and passion in Temecula Valley
-          </p>
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-wine-cream/60" />
+        </div>
+
+        {/* Organic Bottom Border SVG */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <svg 
+            viewBox="0 0 1440 120" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-auto"
+          >
+            <path 
+              d="M0,60 C240,90 480,30 720,60 C960,90 1200,30 1440,60 L1440,120 L0,120 Z" 
+              fill="hsl(var(--wine-cream))"
+              opacity="1"
+            />
+          </svg>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-20 h-full flex items-center justify-center">
+          <div className="text-center px-4 max-w-4xl mx-auto">
+            <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4">
+              Our Collection
+            </p>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg mb-6">
+              Buy Our Wines
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
+              Discover our selection of premium kosher wines, crafted with tradition and passion in Temecula Valley
+            </p>
+          </div>
         </div>
       </section>
 
