@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-wine-nav border-t border-wine-slate py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_2fr] gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-12 mb-12 items-start">
           {/* Brand */}
           <div className="text-center md:text-left">
             <img 
@@ -14,13 +14,13 @@ const Footer = () => {
             />
           </div>
 
-          {/* Navigation Links - Two columns close together */}
-          <div className="flex gap-8">
-            {/* Links */}
+          {/* Explore & Learn - Two columns close together in center */}
+          <div className="flex gap-12 justify-center">
+            {/* Explore */}
             <div>
               <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Explore</h4>
               <ul className="space-y-2">
-                {["Wines", "History", "About Us", "Buy Wine"].map((item) => (
+                {["Wines", "Buy Wine", "Team", "Contact"].map((item) => (
                   <li key={item}>
                     <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
                       {item}
@@ -30,10 +30,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Additional Links */}
+            {/* Learn */}
             <div>
-              <ul className="space-y-2 mt-10">
-                {["Team", "Contact", "Wine Blog"].map((item) => (
+              <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Learn</h4>
+              <ul className="space-y-2">
+                {["History", "Wine Blog", "About Us"].map((item) => (
                   <li key={item}>
                     <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
                       {item}
@@ -45,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center md:text-right">
             <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Contact</h4>
             <ul className="space-y-2 text-wine-cream/70">
               <li>40420 Calle Concion</li>
