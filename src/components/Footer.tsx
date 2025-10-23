@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-wine-nav relative pt-12 pb-12">
       {/* Wavy Top Border */}
-      <div className="absolute top-0 left-0 right-0 transform rotate-180">
+      <div className="absolute top-0 left-0 right-0">
         <img 
           src={footerShape}
           alt=""
