@@ -14,9 +14,7 @@ const HeroHistory = () => {
           backgroundImage: `url(${heroHistoryImage})`,
           transform: `translateY(${parallaxOffset}px)`
         }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-wine-cream/80" />
-      </div>
+      />
 
       {/* Organic Bottom Border SVG */}
       <div className="absolute bottom-0 left-0 right-0 z-10 animate-fade-in">

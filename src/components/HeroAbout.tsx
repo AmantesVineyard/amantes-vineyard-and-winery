@@ -8,9 +8,7 @@ const HeroAbout = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroAboutImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-wine-cream/60" />
-      </div>
+      />
 
       {/* Organic Bottom Border SVG */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
