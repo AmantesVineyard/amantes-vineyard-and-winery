@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
-import heroContactImage from "@/assets/hero-contact.png";
+import heroContactImage from "@/assets/hero-contact-2.png";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 import { Phone, Mail, MapPin } from "lucide-react";
 
