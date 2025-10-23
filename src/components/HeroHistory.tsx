@@ -20,27 +20,46 @@ const HeroHistory = () => {
       {/* Organic Bottom Border SVG - Rolling Hills */}
       <div className="absolute bottom-0 left-0 right-0 z-10 animate-fade-in">
         <svg 
-          viewBox="0 0 1440 120" 
+          viewBox="0 0 1440 140" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-auto drop-shadow-2xl"
           preserveAspectRatio="none"
         >
+          {/* Decorative leaf elements on top */}
+          <g opacity="0.9">
+            <ellipse cx="390" cy="8" rx="8" ry="12" fill="hsl(var(--wine-cream))" />
+            <ellipse cx="420" cy="12" rx="6" ry="10" fill="hsl(var(--wine-cream))" />
+            <ellipse cx="270" cy="15" rx="5" ry="8" fill="hsl(var(--wine-cream))" opacity="0.8" />
+            <ellipse cx="285" cy="18" rx="4" ry="7" fill="hsl(var(--wine-cream))" opacity="0.7" />
+            <ellipse cx="1320" cy="10" rx="7" ry="11" fill="hsl(var(--wine-cream))" />
+            <ellipse cx="1340" cy="14" rx="5" ry="9" fill="hsl(var(--wine-cream))" opacity="0.8" />
+          </g>
+          
+          {/* Thin dark wavy line */}
+          <path 
+            d="M0,25 Q180,15 360,22 T720,20 T1080,24 T1440,22" 
+            stroke="hsl(var(--wine-brown))"
+            strokeWidth="1.5"
+            fill="none"
+            opacity="0.6"
+          />
+          
           {/* Back hill layer */}
           <path 
-            d="M0,60 Q360,20 720,50 T1440,45 L1440,120 L0,120 Z" 
+            d="M0,65 Q360,25 720,55 T1440,50 L1440,140 L0,140 Z" 
             fill="hsl(var(--wine-cream))"
             opacity="0.4"
           />
           {/* Middle hill layer */}
           <path 
-            d="M0,70 Q240,35 480,60 T960,55 T1440,65 L1440,120 L0,120 Z" 
+            d="M0,75 Q240,40 480,65 T960,60 T1440,70 L1440,140 L0,140 Z" 
             fill="hsl(var(--wine-cream))"
             opacity="0.7"
           />
           {/* Front hill layer */}
           <path 
-            d="M0,75 Q180,45 360,70 T720,65 T1080,75 T1440,70 L1440,120 L0,120 Z" 
+            d="M0,80 Q180,50 360,75 T720,70 T1080,80 T1440,75 L1440,140 L0,140 Z" 
             fill="hsl(var(--wine-cream))"
             opacity="1"
           />
