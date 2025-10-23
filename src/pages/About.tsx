@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroAbout from "@/components/HeroAbout";
 import Footer from "@/components/Footer";
+import cyrusImage from "@/assets/about-images-cyrus.png";
 
 const About = () => {
   return (
@@ -32,6 +33,11 @@ const About = () => {
               The Persian-Jewish Winemaking Legacy
             </h2>
             <div className="space-y-6 text-wine-slate leading-relaxed">
+              <img 
+                src={cyrusImage} 
+                alt="Cyrus the Great" 
+                className="float-left mr-6 mb-4 w-64 md:w-80 rounded-lg shadow-lg"
+              />
               <p>
                 The story of Amantes begins over 2,500 years ago, when King Cyrus the Great liberated the Jewish people from Babylon. From that moment, Persian Jews embraced winemaking as both an art and a sacred ritual, producing kosher wine for Shabbat and holidays — a symbol of joy, faith, and gratitude.
               </p>
