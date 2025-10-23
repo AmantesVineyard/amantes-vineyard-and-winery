@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src={logo}
               alt="Amantes Winery"
-              className="h-10 w-auto mx-auto md:mx-0"
+              className="w-[90%] h-auto mx-auto md:mx-0"
             />
           </div>
 
@@ -42,7 +42,7 @@ const Footer = () => {
 
         <div className="border-t border-wine-slate pt-8 text-center">
           <p className="text-wine-cream/60 text-sm">
-            © {new Date().getFullYear()} Lagar Winery. All rights reserved.
+            © 2025 Ha-Adamah, LLC All Rights Reserved.
           </p>
         </div>
       </div>
