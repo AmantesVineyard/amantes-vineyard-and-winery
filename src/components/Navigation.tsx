@@ -14,7 +14,7 @@ const Navigation = () => {
     { name: "TEAM", href: "#team", isRoute: false },
     { name: "CONTACT", href: "#contact", isRoute: false },
     { name: "ABOUT US", href: "/about", isRoute: true },
-    { name: "BUY WINE", href: "#buy-wine", isRoute: false },
+    { name: "BUY WINE", href: "/buy-wine", isRoute: true },
   ];
 
   return (
