@@ -49,13 +49,19 @@ const Footer = () => {
         </div>
 
         {/* Wavy Shape Transition */}
-        <div className="absolute bottom-0 left-0 right-0 w-full" style={{ height: '103px' }}>
-          <img 
-            src={footerShape}
-            alt=""
-            className="absolute bottom-0 left-0 w-full h-full object-cover object-bottom"
-            style={{ objectFit: 'fill' }}
-          />
+        <div className="absolute bottom-0 left-0 right-0 w-full pointer-events-none" style={{ height: '103px' }}>
+          <svg 
+            className="absolute bottom-0 left-0 w-full h-full"
+            viewBox="0 0 2062 103" 
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              fill="#F9F8F4" 
+              fillRule="evenodd"
+              d="M738.1,61.8c47.6-7.69,98.83-21.97,153.67-42.85-80.72,36.26-136.24,41.46-131.16,42.85,25.04,6.84,90.3,29.67,95.46,33.78,6.21,4.94,20.18,0,20.18,0,0,0,37.25,7.42,39.58,7.42s38.81-12.36,53.55-12.36,47.34,12.36,70.63,12.36,76.06-7.42,232.06-59.33c-53.55,22.25-97.42,32.96-93.91,32.96,10.86,0,38.05-14.48,129.61,0,42.69,6.75,123.4-16.48,116.42-20.6s-15.96-4.69-15.52-4.94c1.23-.71,45.79,3.3,76.84,14.01,37.43,12.91,40.36,13.18,61.31,9.89,29.49-4.94,431.06-45.98,513.19-45.98,2,0,2-9.67,0-29H0v29c27.15,0,632.55,42.69,665.14,42.69,21.73,0,46.05-3.3,72.96-9.89Z"
+            />
+          </svg>
         </div>
       </div>
 
