@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "HOME", href: "/", isRoute: true },
-    { name: "HISTORY", href: "#history", isRoute: false },
+    { name: "HISTORY", href: "/history", isRoute: true },
     { name: "WINES", href: "#wines", isRoute: false },
     { name: "TEAM", href: "#team", isRoute: false },
     { name: "CONTACT", href: "#contact", isRoute: false },
