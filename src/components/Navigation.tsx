@@ -8,11 +8,11 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "HOME", href: "#home" },
-    { name: "WINERY", href: "#winery" },
+    { name: "HISTORY", href: "#history" },
     { name: "WINES", href: "#wines" },
     { name: "CONTACT", href: "#contact" },
     { name: "ABOUT US", href: "#about" },
-    { name: "SHOP", href: "#shop" },
+    { name: "BUY WINE", href: "#buy-wine" },
   ];
 
   return (

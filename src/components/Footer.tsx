@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <h4 className="text-wine-cream font-semibold mb-4 tracking-wider uppercase text-sm">Explore</h4>
             <ul className="space-y-2">
-              {["Wines", "Winery", "About Us", "Shop"].map((item) => (
+              {["Wines", "History", "About Us", "Buy Wine"].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-wine-cream/70 hover:text-wine-bronze transition-colors">
                     {item}
