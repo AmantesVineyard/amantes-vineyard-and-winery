@@ -3,7 +3,7 @@ import heroWaveBorder from "@/assets/hero-wave-border.svg";
 
 const HeroAbout = () => {
   return (
-    <section id="about" className="relative min-h-screen w-full overflow-hidden">
+    <section id="about" className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0"

@@ -6,7 +6,7 @@ const HeroTeam = () => {
   const parallaxOffset = useParallax(0.5);
   
   return (
-    <section id="team" className="relative min-h-screen w-full overflow-hidden">
+    <section id="team" className="relative h-screen w-full overflow-hidden">
       {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0 transition-transform duration-100"

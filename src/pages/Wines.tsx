@@ -67,7 +67,7 @@ const Wines = () => {
       <Navigation transparent logoSrc="" />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         <div 
           className="absolute inset-0"
           style={{
