@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import heroTeam from "@/assets/hero-team.png";
 import {
   Carousel,
   CarouselContent,
@@ -41,12 +42,20 @@ const Team = () => {
       <Navigation transparent={true} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="font-serif text-5xl md:text-6xl text-wine-deep mb-4">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroTeam})`,
+            backgroundPosition: 'center center'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-transparent" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="font-serif text-5xl md:text-7xl text-white mb-4 drop-shadow-lg">
             Winemaking Team
           </h1>
-          <p className="text-xl text-wine-slate">
+          <p className="text-xl md:text-2xl text-white/90 drop-shadow-md">
             Our family makes great wine
           </p>
         </div>
