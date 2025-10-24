@@ -3,6 +3,7 @@ import HeroTeam from "@/components/HeroTeam";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import GrapevineSVG from "@/components/GrapevineSVG";
+import logoBlue from "@/assets/amantes-logo-blue-2.png";
 import {
   Carousel,
   CarouselContent,
@@ -40,7 +41,7 @@ const teamMembers = [
 const Team = () => {
   return (
     <div className="min-h-screen bg-wine-cream">
-      <Navigation transparent={true} />
+      <Navigation transparent={true} logoSrc={logoBlue} />
       
       <HeroTeam />
 

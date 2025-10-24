@@ -6,9 +6,10 @@ import logo from "@/assets/amantes-logo.png";
 
 interface NavigationProps {
   transparent?: boolean;
+  logoSrc?: string;
 }
 
-const Navigation = ({ transparent = false }: NavigationProps) => {
+const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -51,9 +52,9 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
           {/* Center Logo */}
           <a href="#home" className="absolute left-1/2 -translate-x-1/2">
             <img 
-              src={logo}
+              src={logoSrc || logo}
               alt="Amantes Winery"
-              className="h-12 lg:h-14 w-auto"
+              className="h-14 lg:h-16 w-auto"
             />
           </a>
 
