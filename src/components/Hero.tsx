@@ -37,7 +37,7 @@ const Hero = () => {
             href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-105 transition-transform duration-300"
+            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px]"
           >
             <img 
               src={hanukkahBanner}
