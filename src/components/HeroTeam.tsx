@@ -26,14 +26,11 @@ const HeroTeam = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center justify-center">
+      <div className="relative z-20 h-full flex items-center justify-center" style={{ marginTop: '60px' }}>
         <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>          
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl">
             Winemaking Team
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mt-4 drop-shadow-lg">
-            Our family makes great wine
-          </p>
         </div>
       </div>
     </section>
