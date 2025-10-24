@@ -2,17 +2,19 @@ import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
-import wineMerlot from "@/assets/wine-bottle-merlot.png";
-import wineCabernet from "@/assets/wine-bottle-cab.png";
-import winePinot from "@/assets/wine-bottle-pn.png";
-import heroImage from "@/assets/hero-buy-wine.png";
+import wineHannuka from "@/assets/wine-hannuka.png";
+import wineTem from "@/assets/wine-tem.png";
+import wineLeparlay from "@/assets/wine-leparlay.png";
+import wine3gf2021 from "@/assets/wine-3gf-2021.png";
+import wine3gf2020 from "@/assets/wine-3gf-2020.png";
+import heroImage from "@/assets/hero-wines.png";
 import waveBorder from "@/assets/hero-wave-border.svg";
 import { useParallax } from "@/hooks/use-parallax";
 
 const wines = [
   {
     id: 1,
-    image: wineMerlot,
+    image: wineHannuka,
     category: "Special Collection",
     name: "Hanukkah Gift Collection",
     description: "Limited Time 🕎 Hanukkah 🕎 Offer! Celebrate the Festival of Lights with Temecula's ONE & ONLY kosher vineyard! Only available while supplies last.",
@@ -21,7 +23,7 @@ const wines = [
   },
   {
     id: 2,
-    image: wineMerlot,
+    image: wineTem,
     category: "Merlot",
     name: "Toi et Moi 2022 Merlot",
     description: "Our Temecula Valley Merlot is a handcrafted Kosher Reserve showcasing rich, velvety flavors with notes of dark cherry and plum. Smooth tannins and a lingering finish make this an exceptional choice for any occasion.",
@@ -30,7 +32,7 @@ const wines = [
   },
   {
     id: 3,
-    image: wineMerlot,
+    image: wineLeparlay,
     category: "Merlot",
     name: "LeParlay 2022 Merlot",
     description: "A sophisticated Merlot that embodies the perfect balance of fruit and oak. Rich flavors and smooth texture make this wine ideal for special occasions and memorable moments.",
@@ -39,7 +41,7 @@ const wines = [
   },
   {
     id: 4,
-    image: wineMerlot,
+    image: wine3gf2021,
     category: "Merlot",
     name: "3Girlfriends 2021 Merlot",
     description: "Named in honor of three special friendships, this Merlot delivers complex flavors with a smooth, elegant finish. Perfect for sharing with those who matter most.",
@@ -48,7 +50,7 @@ const wines = [
   },
   {
     id: 5,
-    image: wineMerlot,
+    image: wine3gf2020,
     category: "Merlot - Limited Reserve",
     name: "3Girlfriends 2020 Merlot Limited Reserve",
     description: "Our premium Limited Reserve showcases the finest expression of our craft. This exceptional vintage offers deep complexity, refined tannins, and a luxurious finish that lingers beautifully.",
@@ -78,11 +80,8 @@ const Wines = () => {
         
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-wine-cream mb-6 animate-fade-in">
-            Our Wines
+            Wines
           </h1>
-          <p className="text-xl md:text-2xl text-wine-cream/90 max-w-3xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Discover our handcrafted collection of premium kosher wines from Temecula Valley
-          </p>
         </div>
         
         <div className="absolute bottom-0 left-0 right-0 z-20">
