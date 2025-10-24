@@ -14,7 +14,7 @@ const HeroTeam = () => {
           backgroundImage: `url(${heroTeamImage})`,
           transform: `translateY(${parallaxOffset}px)`,
           backgroundPosition: 'center center',
-          backgroundSize: 'cover',
+          backgroundSize: window.innerWidth < 768 && window.innerHeight > window.innerWidth ? 'contain' : 'cover',
           backgroundRepeat: 'no-repeat'
         }}
       />
