@@ -10,7 +10,7 @@ const HeroAbout = () => {
         style={{ 
           backgroundImage: `url(${heroAboutImage})`,
           backgroundPosition: 'center center',
-          backgroundSize: window.innerWidth < 768 && window.innerHeight > window.innerWidth ? 'contain' : 'cover',
+          backgroundSize: window.innerWidth < 768 && window.innerHeight > window.innerWidth ? '150%' : 'cover',
           backgroundRepeat: 'no-repeat'
         }}
       />
