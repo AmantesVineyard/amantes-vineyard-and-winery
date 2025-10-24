@@ -25,7 +25,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
   const navLinks = [
     { name: "HOME", href: "/", isRoute: true },
     { name: "HISTORY", href: "/history", isRoute: true },
-    { name: "WINES", href: "#wines", isRoute: false },
+    { name: "WINES", href: "/wines", isRoute: true },
     { name: "TEAM", href: "#team", isRoute: false },
     { name: "CONTACT", href: "/contact", isRoute: true },
     { name: "ABOUT US", href: "/about", isRoute: true },
