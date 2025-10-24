@@ -64,9 +64,9 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
           {/* Center Logo */}
           <a href="#home" className="absolute left-1/2 -translate-x-1/2">
             <img 
-              src={logoSrc || logo}
+              src={(transparent && isScrolled) ? logo : (logoSrc || logo)}
               alt="Amantes Winery"
-              className="h-16 lg:h-20 w-auto"
+              className="h-16 lg:h-20 w-auto transition-opacity duration-300"
             />
           </a>
 
