@@ -54,7 +54,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
             <img 
               src={logoSrc || logo}
               alt="Amantes Winery"
-              className="h-14 lg:h-16 w-auto"
+              className="h-16 lg:h-20 w-auto"
             />
           </a>
 
