@@ -30,7 +30,7 @@ const HeroTeam = () => {
         <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>          
           <h1 
             className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight"
-            style={{ filter: 'drop-shadow(0 15px 15px rgba(0, 0, 0, 0.75))' }}
+            style={{ filter: 'drop-shadow(4.7px 1.7px 7px rgba(0, 0, 0, 0.75))' }}
           >
             Winemaking Team
           </h1>
