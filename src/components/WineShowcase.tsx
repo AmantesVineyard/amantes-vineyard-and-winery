@@ -69,7 +69,7 @@ const WineShowcase = () => {
             {/* Wine Details */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 font-sans">
-                {wine.category}
+                {wine.category} <span className="text-wine-slate/60">- Coming Soon</span>
               </p>
               
               <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
