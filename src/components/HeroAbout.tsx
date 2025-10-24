@@ -6,8 +6,11 @@ const HeroAbout = () => {
     <section id="about" className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroAboutImage})` }}
+        className="absolute inset-0 bg-cover bg-center sm:bg-top"
+        style={{ 
+          backgroundImage: `url(${heroAboutImage})`,
+          backgroundPosition: 'center center'
+        }}
       />
 
       {/* Organic Bottom Border SVG */}

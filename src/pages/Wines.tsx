@@ -69,10 +69,11 @@ const Wines = () => {
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center sm:bg-top"
           style={{
             backgroundImage: `url(${heroImage})`,
             transform: `translateY(${parallaxOffset}px)`,
+            backgroundPosition: 'center center'
           }}
         >
           <div className="absolute inset-0 bg-wine-deep/40" />
