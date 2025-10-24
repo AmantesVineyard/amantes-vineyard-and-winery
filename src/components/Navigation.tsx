@@ -44,6 +44,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
                   key={link.name}
                   to={link.href}
                   className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                  style={{ filter: 'drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85))' }}
                 >
                   {link.name}
                 </Link>
@@ -52,6 +53,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
                   key={link.name}
                   href={link.href}
                   className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                  style={{ filter: 'drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85))' }}
                 >
                   {link.name}
                 </a>
@@ -76,6 +78,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
                   key={link.name}
                   to={link.href}
                   className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                  style={{ filter: 'drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85))' }}
                 >
                   {link.name}
                 </Link>
@@ -84,6 +87,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
                   key={link.name}
                   href={link.href}
                   className="text-sm tracking-widest text-wine-cream/80 hover:text-wine-bronze transition-colors duration-300"
+                  style={{ filter: 'drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85))' }}
                 >
                   {link.name}
                 </a>

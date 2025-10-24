@@ -21,7 +21,8 @@ const HeroTeam = () => {
         <img 
           src={heroWaveBorder}
           alt=""
-          className="w-full h-auto drop-shadow-2xl"
+          className="w-full h-auto"
+          style={{ filter: 'drop-shadow(4.7px 1.7px 7px rgba(0, 0, 0, 0.75))' }}
         />
       </div>
 
