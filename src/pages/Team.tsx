@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import heroTeam from "@/assets/hero-team.png";
+import heroTeam from "@/assets/hero-team-2.png";
 import {
   Carousel,
   CarouselContent,
