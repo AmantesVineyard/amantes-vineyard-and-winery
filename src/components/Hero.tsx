@@ -37,13 +37,11 @@ const Hero = () => {
             href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px]"
+            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px] bg-wine-bronze hover:bg-wine-gold px-8 py-4 rounded-2xl shadow-2xl"
           >
-            <img 
-              src={hanukkahBanner}
-              alt="Hanukkah Gift Collection - 3 bottles for the price of 2"
-              className="max-w-full h-auto rounded-lg shadow-2xl"
-            />
+            <p className="text-wine-cream text-lg md:text-xl font-semibold text-center">
+              Hanukkah Gift Collection: 3 Bottles for the Price of 2. Shop Now
+            </p>
           </a>
         </div>
       </div>
