@@ -67,14 +67,15 @@ const Wines = () => {
       <Navigation transparent logoSrc="" />
       
       {/* Hero Section */}
-      <section className="relative h-[100vh] h-[100dvh] overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover"
+          className="absolute inset-0"
           style={{
             backgroundImage: `url(${heroImage})`,
             transform: `translateY(${parallaxOffset}px)`,
             backgroundPosition: 'center center',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="absolute inset-0 bg-wine-deep/40" />
