@@ -26,7 +26,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
     { name: "HOME", href: "/", isRoute: true },
     { name: "HISTORY", href: "/history", isRoute: true },
     { name: "WINES", href: "/wines", isRoute: true },
-    { name: "TEAM", href: "#team", isRoute: false },
+    { name: "TEAM", href: "/team", isRoute: true },
     { name: "CONTACT", href: "/contact", isRoute: true },
     { name: "ABOUT US", href: "/about", isRoute: true },
     { name: "BUY WINE", href: "/buy-wine", isRoute: true },
@@ -62,13 +62,13 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
           </div>
 
           {/* Center Logo */}
-          <a href="#home" className="absolute left-1/2 -translate-x-1/2 top-[10px]">
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-[10px]">
             <img 
               src={(transparent && isScrolled) ? logo : (logoSrc || logo)}
               alt="Amantes Winery"
               className="h-16 lg:h-20 w-auto transition-opacity duration-300"
             />
-          </a>
+          </Link>
 
           {/* Right Nav Items */}
           <div className="hidden lg:flex items-center space-x-8">
