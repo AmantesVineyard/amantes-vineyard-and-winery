@@ -1,4 +1,4 @@
-import logo from "@/assets/amantes-logo-blue.png";
+import logo from "@/assets/amantes-logo.png";
 import footerShape from "@/assets/footer-shape-2.svg";
 import vineyardBg from "@/assets/vineyard-hero.jpg";
 import GrapevineSVG from "@/components/GrapevineSVG";
@@ -143,8 +143,8 @@ const Footer = () => {
                   40420 Calle Concion<br />Temecula, CA 92592
                 </a>
                 <p className="pt-2">
-                  <a href="tel:+19512207145" className="hover:text-wine-bronze transition-colors">
-                    (951) 220-7145
+                  <a href="tel:+19513832223" className="hover:text-wine-bronze transition-colors">
+                    +1 951-383-2223
                   </a>
                 </p>
                 <p>
