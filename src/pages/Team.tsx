@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
+import HeroTeam from "@/components/HeroTeam";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import heroTeam from "@/assets/hero-team-2.png";
+import GrapevineSVG from "@/components/GrapevineSVG";
 import {
   Carousel,
   CarouselContent,
@@ -39,30 +40,26 @@ const teamMembers = [
 const Team = () => {
   return (
     <div className="min-h-screen bg-wine-cream">
-      <Navigation transparent={true} />
+      <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroTeam})`,
-            backgroundPosition: 'center center'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-transparent" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl md:text-7xl text-white mb-4 drop-shadow-lg">
-            Winemaking Team
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 drop-shadow-md">
-            Our family makes great wine
-          </p>
-        </div>
-      </section>
+      <HeroTeam />
 
       {/* Team Carousel */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative">
+        {/* Decorative Vines Around Content */}
+        <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute right-4 top-32 w-16 h-96 pointer-events-none hidden md:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+        </div>
+        <div className="absolute left-8 top-[600px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        <div className="absolute right-8 top-[800px] w-20 h-80 pointer-events-none hidden lg:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+        </div>
+        
         <div className="container mx-auto max-w-6xl">
           <Carousel
             opts={{
