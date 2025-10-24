@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -11,6 +11,16 @@ interface NavigationProps {
 
 const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "HOME", href: "/", isRoute: true },
@@ -23,7 +33,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 ${transparent ? 'bg-transparent' : 'bg-wine-nav/95 backdrop-blur-sm'} border-b ${transparent ? 'border-transparent' : 'border-wine-slate/20'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${transparent && !isScrolled ? 'bg-transparent' : 'bg-wine-nav/95 backdrop-blur-sm'} border-b ${transparent && !isScrolled ? 'border-transparent' : 'border-wine-slate/20'} transition-all duration-300`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Left Nav Items */}
