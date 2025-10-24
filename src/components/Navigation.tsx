@@ -110,7 +110,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-8 border-t border-wine-slate">
+          <div className="lg:hidden py-8 border-t border-wine-slate bg-wine-nav/60 backdrop-blur-sm">
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
                 link.isRoute ? (
