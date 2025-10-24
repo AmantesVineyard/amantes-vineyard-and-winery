@@ -1,6 +1,7 @@
 import heroImage from "@/assets/hero-home.png";
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
+import hanukkahBanner from "@/assets/hanukkah-banner.png";
 
 const Hero = () => {
   const parallaxOffset = useParallax(0.5);
@@ -29,9 +30,21 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-8">
             Temecula's only kosher vineyard
           </h1>
+          <a 
+            href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block hover:scale-105 transition-transform duration-300"
+          >
+            <img 
+              src={hanukkahBanner}
+              alt="Hanukkah Gift Collection - 3 bottles for the price of 2"
+              className="max-w-full h-auto rounded-lg shadow-2xl"
+            />
+          </a>
         </div>
       </div>
     </section>

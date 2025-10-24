@@ -81,7 +81,7 @@ const WineShowcase = () => {
               </p>
 
               <a 
-                href="#shop"
+                href="/buy-wine"
                 className="inline-flex items-center gap-2 text-wine-bronze hover:text-wine-gold transition-colors duration-300 group"
               >
                 <span className="tracking-wider uppercase text-sm font-semibold">Browse Wines</span>
