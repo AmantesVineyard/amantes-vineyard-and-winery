@@ -9,11 +9,67 @@ const Footer = () => {
       {/* Top Section - Light Background with Content */}
       <div className="bg-wine-cream py-16 pb-32 relative">
         <div className="container mx-auto px-4">
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto text-center mb-16">
-            {/* Contact */}
+          {/* Three Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {/* Left - Logo */}
+            <div className="flex justify-center md:justify-start items-start">
+              <img 
+                src={logo}
+                alt="Amantes Winery"
+                className="w-48 h-auto"
+              />
+            </div>
+
+            {/* Middle - Explore and Learn */}
+            <div className="grid grid-cols-2 gap-8">
+              {/* Explore */}
+              <div>
+                <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">EXPLORE</h4>
+                <ul className="space-y-2 text-wine-slate">
+                  <li>
+                    <a href="/buy-wine" className="hover:text-wine-bronze transition-colors">
+                      Buy Wine
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/team" className="hover:text-wine-bronze transition-colors">
+                      Team
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contact" className="hover:text-wine-bronze transition-colors">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Learn */}
+              <div>
+                <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">LEARN</h4>
+                <ul className="space-y-2 text-wine-slate">
+                  <li>
+                    <a href="/history" className="hover:text-wine-bronze transition-colors">
+                      History
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/about" className="hover:text-wine-bronze transition-colors">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#wines" className="hover:text-wine-bronze transition-colors">
+                      Wines
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right - Contact Info */}
             <div>
-              <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">Our Address</h4>
+              <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">CONTACT</h4>
               <div className="space-y-2 text-wine-slate">
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=40420+Calle+Concion+Temecula+CA+92592" 
@@ -21,30 +77,20 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-wine-bronze transition-colors block"
                 >
-                  40420 Calle Concion<br />Temecula, California, 92592
+                  40420 Calle Concion<br />Temecula, CA 92592
                 </a>
+                <p className="pt-2">
+                  <a href="tel:+19512207145" className="hover:text-wine-bronze transition-colors">
+                    (951) 220-7145
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:amantes@amantesvineyard.com" className="hover:text-wine-bronze transition-colors">
+                    amantes@amantesvineyard.com
+                  </a>
+                </p>
               </div>
             </div>
-
-            {/* Distribution */}
-            <div>
-              <h4 className="text-wine-deep font-semibold mb-4 tracking-wider text-sm">Distribution</h4>
-              <div className="space-y-2 text-wine-slate">
-                <p>For any inquiries write us at</p>
-                <a href="mailto:amantes@amantesvineyard.com" className="hover:text-wine-bronze transition-colors block">
-                  amantes@amantesvineyard.com
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Logo centered below columns */}
-          <div className="flex justify-center">
-            <img 
-              src={logo}
-              alt="Amantes Winery"
-              className="w-48 h-auto"
-            />
           </div>
         </div>
 
