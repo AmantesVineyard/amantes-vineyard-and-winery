@@ -32,15 +32,15 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-20 h-full flex items-center md:items-start justify-center">
-        <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in md:pt-[240px]" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-8">
+        <div className="text-center px-4 max-w-4xl mx-auto md:pt-[240px]">          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-8 text-reveal">
             Temecula's only kosher vineyard
           </h1>
           <a 
             href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px] md:mt-[133px] bg-wine-bronze/75 hover:bg-wine-gold/75 px-8 py-4 rounded-2xl shadow-2xl border-2 border-white"
+            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px] md:mt-[133px] bg-wine-bronze/75 hover:bg-wine-gold/75 px-8 py-4 rounded-2xl shadow-2xl border-2 border-white text-slide-up delay-400"
           >
             <p className="text-wine-cream text-lg md:text-xl font-semibold text-center">
               Hanukkah Gift Collection: 3 Bottles for the Price of 2. Shop Now

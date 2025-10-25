@@ -31,9 +31,9 @@ const HeroTeam = () => {
 
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center" style={{ marginTop: '140px' }}>
-        <div className="text-center px-4 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>          
+        <div className="text-center px-4 max-w-4xl mx-auto">          
           <h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight letter-spacing-animate"
             style={{ filter: 'drop-shadow(4.7px 1.7px 7px rgba(0, 0, 0, 0.75))' }}
           >
             Winemaking Team
