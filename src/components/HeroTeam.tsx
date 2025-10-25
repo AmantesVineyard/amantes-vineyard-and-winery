@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import teamGuys from "@/assets/team-guys.png";
 import teamBg from "@/assets/team-bg.png";
 import { useParallax } from "@/hooks/use-parallax";
@@ -5,6 +6,13 @@ import heroWaveBorder from "@/assets/hero-wave-border.svg";
 
 const HeroTeam = () => {
   const parallaxOffset = useParallax(0.5);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   return (
     <section id="team" className="relative h-screen w-full overflow-hidden">
@@ -27,7 +35,7 @@ const HeroTeam = () => {
           backgroundImage: `url(${teamGuys})`,
           transform: `translateY(${parallaxOffset}px)`,
           backgroundPosition: 'center bottom',
-          backgroundSize: window.innerWidth < 768 ? 'contain' : 'auto 85%',
+          backgroundSize: windowWidth < 768 ? 'contain' : 'auto 85%',
           backgroundRepeat: 'no-repeat'
         }}
       />
