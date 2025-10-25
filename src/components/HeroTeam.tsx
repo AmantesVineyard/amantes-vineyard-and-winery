@@ -1,4 +1,4 @@
-import heroTeamImage from "@/assets/hero-team-8.png";
+import heroTeamImage from "@/assets/hero-team-new.png";
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 
