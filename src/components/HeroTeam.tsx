@@ -1,4 +1,5 @@
-import heroTeamImage from "@/assets/hero-team3.png";
+import teamGuys from "@/assets/team-guys.png";
+import teamBg from "@/assets/team-bg.png";
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 
@@ -7,14 +8,26 @@ const HeroTeam = () => {
   
   return (
     <section id="team" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Parallax */}
+      {/* Vineyard Background with Parallax */}
       <div 
         className="absolute inset-0 transition-transform duration-100"
         style={{ 
-          backgroundImage: `url(${heroTeamImage})`,
+          backgroundImage: `url(${teamBg})`,
           transform: `translateY(${parallaxOffset}px)`,
           backgroundPosition: 'center center',
-          backgroundSize: window.innerWidth < 768 && window.innerWidth > window.innerHeight ? '120%' : 'cover',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
+      {/* Team Members Layer - Positioned Responsively */}
+      <div 
+        className="absolute inset-0 transition-transform duration-100"
+        style={{ 
+          backgroundImage: `url(${teamGuys})`,
+          transform: `translateY(${parallaxOffset}px)`,
+          backgroundPosition: 'center bottom',
+          backgroundSize: window.innerWidth < 768 ? 'contain' : 'auto 85%',
           backgroundRepeat: 'no-repeat'
         }}
       />
