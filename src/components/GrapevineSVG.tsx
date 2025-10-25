@@ -12,7 +12,7 @@ const GrapevineSVG = ({ side = "left", className = "" }: GrapevineSVGProps) => {
 
   useEffect(() => {
     // Vine grows from 0% to 100% as you scroll through the page
-    const targetGrowth = Math.min(scrollProgress * 1.5, 100);
+    const targetGrowth = Math.min(scrollProgress * 4, 100);
     setGrowth(targetGrowth);
   }, [scrollProgress]);
 
