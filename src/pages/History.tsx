@@ -17,18 +17,30 @@ const History = () => {
       <HeroHistory />
       
       <main className="container mx-auto px-4 py-16 max-w-4xl relative">
-        {/* Decorative Vines Around Content */}
-        <div className="absolute -left-8 top-20 w-16 h-96 pointer-events-none hidden md:block">
-          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+        {/* Decorative Vines Around Content - Enhanced */}
+        <div className="absolute -left-12 top-20 w-32 h-[600px] pointer-events-none hidden md:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-80" />
         </div>
-        <div className="absolute -right-8 top-40 w-16 h-96 pointer-events-none hidden md:block">
-          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+        <div className="absolute -right-12 top-40 w-32 h-[600px] pointer-events-none hidden md:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-80" />
         </div>
-        <div className="absolute -left-12 top-[500px] w-20 h-80 pointer-events-none hidden lg:block">
-          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+        <div className="absolute -left-16 top-[700px] w-32 h-[600px] pointer-events-none hidden lg:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-75" />
         </div>
-        <div className="absolute -right-12 top-[700px] w-20 h-80 pointer-events-none hidden lg:block">
-          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+        <div className="absolute -right-16 top-[900px] w-32 h-[600px] pointer-events-none hidden lg:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-75" />
+        </div>
+        <div className="absolute -left-12 top-[1400px] w-28 h-[500px] pointer-events-none hidden md:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-70" />
+        </div>
+        <div className="absolute -right-12 top-[1600px] w-28 h-[500px] pointer-events-none hidden md:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-70" />
+        </div>
+        <div className="absolute -left-16 top-[2100px] w-32 h-[600px] pointer-events-none hidden lg:block">
+          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-75" />
+        </div>
+        <div className="absolute -right-16 top-[2300px] w-32 h-[600px] pointer-events-none hidden lg:block">
+          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-75" />
         </div>
         {/* Table of Contents */}
         <section className="mb-16">
