@@ -177,5 +177,7 @@ All colors MUST be HSL.
 
 .vamtam-letter {
   display: inline-block;
-  animation: vamtam-blurred-letters 1.3s ease-in forwards;
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30px);
 }
