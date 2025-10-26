@@ -166,12 +166,10 @@ All colors MUST be HSL.
   0% {
     opacity: 0;
     filter: blur(15px);
-    transform: translateY(30px);
   }
   100% {
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0);
   }
 }
 
@@ -179,5 +177,4 @@ All colors MUST be HSL.
   display: inline-block;
   opacity: 0;
   filter: blur(15px);
-  transform: translateY(30px);
 }
