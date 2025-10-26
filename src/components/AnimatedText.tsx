@@ -6,22 +6,18 @@ interface AnimatedTextProps {
 
 const AnimatedText = ({ text, className = "", style = {} }: AnimatedTextProps) => {
   const words = text.split(' ');
-  let totalLetterIndex = 0;
   
   return (
     <h1 className={className} style={style}>
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="vamtam-word inline-block">
           {word.split('').map((letter, letterIndex) => {
-            // Each letter gets progressively slower delay
-            const delay = totalLetterIndex * 0.08;
-            totalLetterIndex++;
             return (
               <span
                 key={letterIndex}
                 className="vamtam-letter"
                 style={{
-                  animation: `1.8s ease-in ${delay}s 1 normal forwards running vamtam-blurred-letters`
+                  animation: `1.8s ease-in 0s 1 normal forwards running vamtam-blurred-letters`
                 }}
               >
                 {letter}
