@@ -46,7 +46,7 @@ const Team = () => {
       <HeroTeam />
 
       {/* Team Carousel */}
-      <section className="py-16 px-4 relative">
+      <section className="pt-16 px-4 relative">
         {/* Decorative Vines Around Content */}
         <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
           <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
