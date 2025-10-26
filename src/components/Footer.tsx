@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="relative">
       {/* Wavy Shape Transition */}
-      <div className="relative w-full pointer-events-none overflow-hidden" style={{ height: '103px', marginTop: '-103px' }}>
+      <div className="relative w-full pointer-events-none overflow-hidden" style={{ height: '103px' }}>
         <svg 
           className="w-full h-full block"
           viewBox="0 0 2062 103" 
