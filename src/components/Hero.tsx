@@ -33,7 +33,10 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center md:items-start justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto md:pt-[240px]">          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-8 text-reveal">
+          <h1 
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8 text-reveal"
+            style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
+          >
             Temecula's only kosher vineyard
           </h1>
           <a 
