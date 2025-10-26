@@ -41,7 +41,7 @@ const BuyWine = () => {
               Our Collection
             </p>
             <h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6 letter-spacing-animate"
               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
             >
               Buy Our Wines

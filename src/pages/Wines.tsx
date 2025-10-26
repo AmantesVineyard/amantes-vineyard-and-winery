@@ -83,7 +83,7 @@ const Wines = () => {
         
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <h1 
-            className="text-6xl md:text-7xl lg:text-8xl font-serif text-wine-cream mb-6 animate-fade-in"
+            className="text-6xl md:text-7xl lg:text-8xl font-serif text-wine-cream mb-6 letter-spacing-animate"
             style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
           >
             Wines
