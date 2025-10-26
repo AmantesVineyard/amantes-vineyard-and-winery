@@ -11,7 +11,7 @@ const About = () => {
       <HeroAbout />
       
       {/* Content Sections */}
-      <section className="py-20 px-4 relative">
+      <section className="py-20 px-4 pb-32 relative">
         {/* Decorative Vines Around Content */}
         <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
           <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
