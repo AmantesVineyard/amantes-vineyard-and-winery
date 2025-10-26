@@ -6,12 +6,9 @@ const HeroAbout = () => {
     <section id="about" className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `url(${heroAboutImage})`,
-          backgroundPosition: 'center center',
-          backgroundSize: window.innerWidth < 768 && window.innerHeight > window.innerWidth ? '150%' : 'cover',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage: `url(${heroAboutImage})`
         }}
       />
 
