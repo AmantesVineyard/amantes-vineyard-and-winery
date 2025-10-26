@@ -10,6 +10,7 @@ import wine3gf2020 from "@/assets/wine-3gf-2020.png";
 import heroImage from "@/assets/hero-wines.png";
 import waveBorder from "@/assets/hero-wave-border.svg";
 import { useParallax } from "@/hooks/use-parallax";
+import AnimatedText from "@/components/AnimatedText";
 
 const wines = [
   {
@@ -82,12 +83,11 @@ const Wines = () => {
         </div>
         
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-          <h1 
-            className="text-6xl md:text-7xl lg:text-8xl font-serif text-wine-cream mb-6 letter-spacing-animate"
+          <AnimatedText 
+            text="Wines"
+            className="text-6xl md:text-7xl lg:text-8xl font-serif text-wine-cream mb-6"
             style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
-          >
-            Wines
-          </h1>
+          />
         </div>
         
         <div className="absolute bottom-0 left-0 right-0 z-20">

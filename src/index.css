@@ -161,3 +161,21 @@ All colors MUST be HSL.
     opacity: 1;
   }
 }
+
+@keyframes vamtam-blurred-letters {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.vamtam-letter {
+  display: inline-block;
+  animation: vamtam-blurred-letters 1.3s ease-in forwards;
+}

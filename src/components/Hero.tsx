@@ -2,6 +2,7 @@ import heroImage from "@/assets/hero-home.png";
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 import hanukkahBanner from "@/assets/hanukkah-banner.png";
+import AnimatedText from "./AnimatedText";
 
 const Hero = () => {
   const parallaxOffset = useParallax(0.5);
@@ -33,12 +34,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center md:items-start justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto md:pt-[240px]">          
-          <h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8 letter-spacing-animate"
+          <AnimatedText 
+            text="Temecula's only kosher vineyard"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8"
             style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
-          >
-            Temecula's only kosher vineyard
-          </h1>
+          />
           <a 
             href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
             target="_blank"

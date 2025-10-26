@@ -6,6 +6,7 @@ import heroImage from "@/assets/hero-buy-wine.png";
 import { useParallax } from "@/hooks/use-parallax";
 import GrapevineSVG from "@/components/GrapevineSVG";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
+import AnimatedText from "@/components/AnimatedText";
 
 const BuyWine = () => {
   const parallaxOffset = useParallax(0.5);
@@ -40,12 +41,11 @@ const BuyWine = () => {
             <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 drop-shadow-lg">
               Our Collection
             </p>
-            <h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6 letter-spacing-animate"
+            <AnimatedText 
+              text="Buy Our Wines"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6"
               style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
-            >
-              Buy Our Wines
-            </h1>
+            />
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
               Discover our selection of premium kosher wines, crafted with tradition and passion in Temecula Valley
             </p>
