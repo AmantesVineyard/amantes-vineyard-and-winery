@@ -1,14 +1,17 @@
 import heroAboutImage from "@/assets/hero-3gen-about.png";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
+import { useParallax } from "@/hooks/use-parallax";
 
 const HeroAbout = () => {
+  const parallaxOffset = useParallax(0.5);
   return (
     <section id="about" className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-100"
         style={{ 
-          backgroundImage: `url(${heroAboutImage})`
+          backgroundImage: `url(${heroAboutImage})`,
+          transform: `translateY(${parallaxOffset}px)`
         }}
       />
 
