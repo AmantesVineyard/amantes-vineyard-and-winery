@@ -12,13 +12,14 @@ const AnimatedText = ({ text, className = "", style = {} }: AnimatedTextProps) =
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="vamtam-word inline-block">
           {word.split('').map((letter, letterIndex) => {
-            const totalDelay = (wordIndex * 5 + letterIndex) * 0.03;
+            // First letter of each word gets a slight delay, rest start immediately
+            const delay = letterIndex === 0 && wordIndex > 0 ? 0.2 : 0;
             return (
               <span
                 key={letterIndex}
                 className="vamtam-letter"
                 style={{
-                  animationDelay: `${totalDelay}s`
+                  animation: `1.3s ease-in ${delay}s 1 normal forwards running vamtam-blurred-letters`
                 }}
               >
                 {letter}
