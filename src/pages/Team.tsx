@@ -40,7 +40,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="min-h-screen bg-wine-cream">
+    <div className="bg-wine-cream">
       <Navigation transparent={true} logoSrc={logoBlue} />
       
       <HeroTeam />
