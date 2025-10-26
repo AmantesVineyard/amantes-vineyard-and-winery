@@ -181,19 +181,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Hours */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-serif text-wine-deep mb-6">
-              Visiting Hours
-            </h3>
-            <p className="text-wine-slate/80 leading-relaxed">
-              <strong>Friday - Sunday:</strong> 12:00 PM - 6:00 PM<br />
-              <strong>Monday - Thursday:</strong> By Appointment Only
-            </p>
-            <p className="text-wine-slate/60 mt-4 text-sm">
-              Please call ahead to ensure availability
-            </p>
-          </div>
         </div>
       </section>
 
