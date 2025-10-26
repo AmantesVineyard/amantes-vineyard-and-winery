@@ -69,15 +69,21 @@ const History = () => {
             Additional discoveries at Godin Tepe revealed wine vessels from 3100-2900 BCE, confirming that ancient Persia was a cradle of viticulture and winemaking civilization.
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Key Historical Facts:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li><strong>5400 BCE:</strong> Earliest evidence of Persian winemaking</li>
-              <li><strong>Location:</strong> Zagros Mountains, western Persia (modern Iran)</li>
-              <li><strong>Significance:</strong> Among the world's oldest wine production sites</li>
-              <li><strong>Cultural Impact:</strong> Wine became central to Zoroastrian rituals and Persian culture</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="facts-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Key Historical Facts
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li><strong>5400 BCE:</strong> Earliest evidence of Persian winemaking</li>
+                  <li><strong>Location:</strong> Zagros Mountains, western Persia (modern Iran)</li>
+                  <li><strong>Significance:</strong> Among the world's oldest wine production sites</li>
+                  <li><strong>Cultural Impact:</strong> Wine became central to Zoroastrian rituals and Persian culture</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Wine in Ancient Persian Culture and Zoroastrianism</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
@@ -114,16 +120,22 @@ const History = () => {
             These texts reveal that Jews weren't merely tolerated in ancient Persia—they thrived, holding positions in the royal court and integrating into Persian economic life.
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Major Persian Jewish Communities:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li><strong>Susa (Shushan)</strong> - Ancient Persian capital</li>
-              <li><strong>Shiraz</strong> - Wine production center</li>
-              <li><strong>Isfahan</strong> - Commercial hub</li>
-              <li><strong>Hamadan (Ecbatana)</strong> - Ancient Median capital</li>
-              <li><strong>Kermanshah</strong> - Wine manufacturing center</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="communities-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Major Persian Jewish Communities
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li><strong>Susa (Shushan)</strong> - Ancient Persian capital</li>
+                  <li><strong>Shiraz</strong> - Wine production center</li>
+                  <li><strong>Isfahan</strong> - Commercial hub</li>
+                  <li><strong>Hamadan (Ecbatana)</strong> - Ancient Median capital</li>
+                  <li><strong>Kermanshah</strong> - Wine manufacturing center</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
 
         {/* Purim Connection Section */}
@@ -174,17 +186,23 @@ const History = () => {
             <li><strong>Community tradition:</strong> Every Jewish family made wine for Shabbat and holidays</li>
           </ul>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Traditional Jewish Wine Production in Persia:</h4>
-            <p className="text-wine-brown mb-3">From ancient times through 1979, Jewish families in Iran followed annual winemaking rituals:</p>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Purchasing fresh grapes seasonally</li>
-              <li>Family wine production for household use</li>
-              <li>Wine for Shabbat kiddush (blessing)</li>
-              <li>Holiday wines for Passover, Purim, and celebrations</li>
-              <li>Wine for lifecycle events (weddings, brit milah ceremonies)</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="production-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Traditional Jewish Wine Production in Persia
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <p className="text-wine-brown mb-3">From ancient times through 1979, Jewish families in Iran followed annual winemaking rituals:</p>
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Purchasing fresh grapes seasonally</li>
+                  <li>Family wine production for household use</li>
+                  <li>Wine for Shabbat kiddush (blessing)</li>
+                  <li>Holiday wines for Passover, Purim, and celebrations</li>
+                  <li>Wine for lifecycle events (weddings, brit milah ceremonies)</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <p className="text-wine-brown mb-4 leading-relaxed">
             Beyond home production, prominent Jewish families operated commercial wine factories in:
@@ -223,34 +241,46 @@ const History = () => {
             When Reza Shah Pahlavi established his dynasty in 1925, he implemented sweeping modernization reforms that transformed Iran into a secular, Western-oriented state. These changes dramatically improved life for Iran's Jewish minority:
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Key Pahlavi-Era Reforms Affecting Jewish Winemakers:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Weakened Shi'a clerical power and influence</li>
-              <li>Abolished religious minority restrictions</li>
-              <li>Eliminated the concept of "ritual impurity" (najasat) of non-Muslims</li>
-              <li>Promoted Iranian nationalism over Islamic identity</li>
-              <li>Encouraged economic development and entrepreneurship</li>
-              <li>Protected Jewish businesses and property rights</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="reforms-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Key Pahlavi-Era Reforms Affecting Jewish Winemakers
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Weakened Shi'a clerical power and influence</li>
+                  <li>Abolished religious minority restrictions</li>
+                  <li>Eliminated the concept of "ritual impurity" (najasat) of non-Muslims</li>
+                  <li>Promoted Iranian nationalism over Islamic identity</li>
+                  <li>Encouraged economic development and entrepreneurship</li>
+                  <li>Protected Jewish businesses and property rights</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">The Most Prosperous Era for Iranian Jews</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
             The reign of Mohammad Reza Shah Pahlavi (1941-1979) marked the "Golden Age" of Iranian Jewry:
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Jewish Economic Success Statistics (1970s):</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Only 10% of Iranian Jews classified as impoverished</li>
-              <li>80% achieved middle-class status</li>
-              <li>10% reached wealthy status</li>
-              <li>600 of Iran's 10,000 physicians were Jewish</li>
-              <li>80 of 4,000 university lecturers were Jewish</li>
-              <li>2 of 18 Iranian Academy of Sciences members were Jewish</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="statistics-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Jewish Economic Success Statistics (1970s)
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Only 10% of Iranian Jews classified as impoverished</li>
+                  <li>80% achieved middle-class status</li>
+                  <li>10% reached wealthy status</li>
+                  <li>600 of Iran's 10,000 physicians were Jewish</li>
+                  <li>80 of 4,000 university lecturers were Jewish</li>
+                  <li>2 of 18 Iranian Academy of Sciences members were Jewish</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <p className="text-wine-brown mb-6 leading-relaxed">
             Despite comprising less than 0.25% of Iran's population, Jews played disproportionate roles in medicine, academia, commerce, and cultural life.
@@ -261,26 +291,38 @@ const History = () => {
             During the Pahlavi era, Jewish wine production reached its zenith:
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Commercial Wine Production:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Up to 300 wineries operated throughout Iran before 1979</li>
-              <li>Jewish families owned and operated major wine factories</li>
-              <li>Commercial brands served domestic and export markets</li>
-              <li>Modern winemaking techniques merged with traditional methods</li>
-              <li>Jewish brewers created popular beer brands (Shams Beer)</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="commercial-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Commercial Wine Production
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Up to 300 wineries operated throughout Iran before 1979</li>
+                  <li>Jewish families owned and operated major wine factories</li>
+                  <li>Commercial brands served domestic and export markets</li>
+                  <li>Modern winemaking techniques merged with traditional methods</li>
+                  <li>Jewish brewers created popular beer brands (Shams Beer)</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Home Winemaking Traditions:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Every Jewish household maintained winemaking traditions</li>
-              <li>Seasonal grape purchases from local vineyards</li>
-              <li>Family recipes passed through generations</li>
-              <li>Wine production for religious observance and celebrations</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="home-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Home Winemaking Traditions
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Every Jewish household maintained winemaking traditions</li>
+                  <li>Seasonal grape purchases from local vineyards</li>
+                  <li>Family recipes passed through generations</li>
+                  <li>Wine production for religious observance and celebrations</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Jewish Population Centers and Wine Production (1979)</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
@@ -307,17 +349,23 @@ const History = () => {
             On February 11, 1979, Ayatollah Khomeini established the Islamic Republic of Iran, fundamentally transforming the country and ending thousands of years of Persian wine tradition.
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Immediate Impact on Jewish Winemakers:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>All 300 Iranian wineries forced to close</li>
-              <li>Jewish-owned wine factories confiscated or destroyed</li>
-              <li>Alcoholic beverage businesses seized by the regime</li>
-              <li>Wine production criminalized under Islamic law</li>
-              <li>Jewish winemaking families fled the country</li>
-              <li>Generational expertise and traditions severed</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="impact-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Immediate Impact on Jewish Winemakers
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>All 300 Iranian wineries forced to close</li>
+                  <li>Jewish-owned wine factories confiscated or destroyed</li>
+                  <li>Alcoholic beverage businesses seized by the regime</li>
+                  <li>Wine production criminalized under Islamic law</li>
+                  <li>Jewish winemaking families fled the country</li>
+                  <li>Generational expertise and traditions severed</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Why Jewish Winemakers Were Targeted</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
@@ -330,16 +378,22 @@ const History = () => {
             <li>Professional prominence created resentment among revolutionary factions</li>
           </ol>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Documented Consequences for Iranian Jews:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Over 12 Iranian Jews executed (many for ties to the Shah's court)</li>
-              <li>Tens of thousands fled Iran (primarily to Israel, USA, and California)</li>
-              <li>Vast amounts of property abandoned or confiscated</li>
-              <li>Jewish population declined from 80,000 (1979) to approximately 9,000-12,000 (2012)</li>
-              <li>Complete loss of commercial wine industry</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="consequences-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Documented Consequences for Iranian Jews
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Over 12 Iranian Jews executed (many for ties to the Shah's court)</li>
+                  <li>Tens of thousands fled Iran (primarily to Israel, USA, and California)</li>
+                  <li>Vast amounts of property abandoned or confiscated</li>
+                  <li>Jewish population declined from 80,000 (1979) to approximately 9,000-12,000 (2012)</li>
+                  <li>Complete loss of commercial wine industry</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">The End of 7,000 Years of Persian Wine Tradition</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
@@ -377,58 +431,80 @@ const History = () => {
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Modern Iranian Jewish Wineries in California</h3>
           
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">
-              <a href="https://www.jamshidwine.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-bronze transition-colors">
-                Jamshid Winery
-              </a> - Santa Ynez Valley, California
-            </h4>
-            <p className="text-wine-brown mb-3">
-              Founded by Dr. Jamshid Maddahi, a Los Angeles cardiologist and UCLA medical school professor, Jamshid Winery explicitly connects to Persian Jewish heritage:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Named after the legendary Persian King Jamshid</li>
-              <li>Located in California's Santa Ynez Valley</li>
-              <li>Produces kosher and non-kosher wines</li>
-              <li>Celebrates 7,000 years of Persian wine tradition</li>
-              <li>Mission: Inspire younger Iranian Jews to embrace winemaking heritage</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="jamshid-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                <a href="https://www.jamshidwine.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-bronze transition-colors">
+                  Jamshid Winery
+                </a> - Santa Ynez Valley, California
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <p className="text-wine-brown mb-3">
+                  Founded by Dr. Jamshid Maddahi, a Los Angeles cardiologist and UCLA medical school professor, Jamshid Winery explicitly connects to Persian Jewish heritage:
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Named after the legendary Persian King Jamshid</li>
+                  <li>Located in California's Santa Ynez Valley</li>
+                  <li>Produces kosher and non-kosher wines</li>
+                  <li>Celebrates 7,000 years of Persian wine tradition</li>
+                  <li>Mission: Inspire younger Iranian Jews to embrace winemaking heritage</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Other Iranian-Founded California Wineries:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li><strong><a href="https://www.maysara.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Maysara Winery</a></strong> (Willamette Valley, Oregon) - Momtazi family</li>
-              <li><strong><a href="https://azarivineyards.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Azari Vineyards</a></strong> (Petaluma Gap, California) - Kamal and Parichehr Azari</li>
-              <li><strong><a href="https://fazelicellars.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Fazeli Cellars</a></strong> (Temecula, California) - Bizhan Fazeli</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="other-wineries-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Other Iranian-Founded California Wineries
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li><strong><a href="https://www.maysara.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Maysara Winery</a></strong> (Willamette Valley, Oregon) - Momtazi family</li>
+                  <li><strong><a href="https://azarivineyards.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Azari Vineyards</a></strong> (Petaluma Gap, California) - Kamal and Parichehr Azari</li>
+                  <li><strong><a href="https://fazelicellars.com/" target="_blank" rel="noopener noreferrer" className="hover:text-wine-burgundy transition-colors">Fazeli Cellars</a></strong> (Temecula, California) - Bizhan Fazeli</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h3 className="text-2xl font-serif text-wine-burgundy mb-4">Continuing the Legacy: Persian Jewish Wine Traditions Today</h3>
           <p className="text-wine-brown mb-4 leading-relaxed">
             These California Persian Jewish wineries aren't just making wine—they're preserving cultural memory:
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Traditional Elements Preserved:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>Family winemaking knowledge passed from Iranian elders</li>
-              <li>Wine for Shabbat, Purim, Passover, and celebrations</li>
-              <li>Kosher production methods for religious observance</li>
-              <li>Persian cultural identity expressed through viticulture</li>
-              <li>Education of younger generations about heritage</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="traditional-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Traditional Elements Preserved
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>Family winemaking knowledge passed from Iranian elders</li>
+                  <li>Wine for Shabbat, Purim, Passover, and celebrations</li>
+                  <li>Kosher production methods for religious observance</li>
+                  <li>Persian cultural identity expressed through viticulture</li>
+                  <li>Education of younger generations about heritage</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-xl font-serif text-wine-burgundy mb-3">Modern Adaptations:</h4>
-            <ul className="list-disc list-inside space-y-2 text-wine-brown">
-              <li>California terroir and grape varieties</li>
-              <li>Contemporary winemaking technology</li>
-              <li>American wine market adaptation</li>
-              <li>Fusion of Persian tradition with New World techniques</li>
-            </ul>
-          </div>
+          <Accordion type="single" collapsible className="w-full mb-6">
+            <AccordionItem value="modern-1" className="bg-white rounded-lg shadow-md px-6 border-none">
+              <AccordionTrigger className="text-xl font-serif text-wine-burgundy hover:no-underline py-6">
+                Modern Adaptations
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <ul className="list-disc list-inside space-y-2 text-wine-brown">
+                  <li>California terroir and grape varieties</li>
+                  <li>Contemporary winemaking technology</li>
+                  <li>American wine market adaptation</li>
+                  <li>Fusion of Persian tradition with New World techniques</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
 
         {/* FAQs Section */}
