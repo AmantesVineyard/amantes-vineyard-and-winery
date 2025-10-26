@@ -31,7 +31,10 @@ const HeroHistory = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl text-reveal">
+          <h1 
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight text-reveal"
+            style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
+          >
             A History of Jewish Wine in Persia...<br />Cyrus to Temecula
           </h1>
         </div>

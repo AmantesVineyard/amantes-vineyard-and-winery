@@ -34,7 +34,7 @@ const HeroTeam = () => {
         <div className="text-center px-4 max-w-4xl mx-auto">          
           <h1 
             className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight letter-spacing-animate"
-            style={{ filter: 'drop-shadow(4.7px 1.7px 7px rgba(0, 0, 0, 0.75))' }}
+            style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
           >
             Winemaking Team
           </h1>

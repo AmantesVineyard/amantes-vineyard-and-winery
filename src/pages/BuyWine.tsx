@@ -40,7 +40,10 @@ const BuyWine = () => {
             <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 drop-shadow-lg">
               Our Collection
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-2xl mb-6">
+            <h1 
+              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6"
+              style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
+            >
               Buy Our Wines
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">

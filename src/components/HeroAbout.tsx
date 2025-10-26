@@ -27,7 +27,10 @@ const HeroAbout = () => {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg letter-spacing-animate">
+          <h1 
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight letter-spacing-animate"
+            style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
+          >
             Three Generations<br />of Persian<br />Winemaking
           </h1>
         </div>
