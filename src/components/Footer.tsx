@@ -14,7 +14,7 @@ const Footer = () => {
             viewBox="0 0 2062 103" 
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ display: 'block' }}
+            style={{ display: 'block', transform: 'scaleY(-1)' }}
           >
             <defs>
               <style>
