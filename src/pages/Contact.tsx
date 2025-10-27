@@ -5,8 +5,10 @@ import heroContactImage from "@/assets/hero-contact-2.png";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 import { Phone, Mail, MapPin } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
+import { useParallax } from "@/hooks/use-parallax";
 
 const Contact = () => {
+  const parallaxOffset = useParallax(0.5);
   return (
     <div className="min-h-screen bg-wine-cream">
       <Navigation transparent />
@@ -18,7 +20,8 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center grayscale"
           style={{ 
             backgroundImage: `url(${heroContactImage})`,
-            backgroundPosition: 'center 60%'
+            backgroundPosition: 'center 60%',
+            transform: `translateY(${parallaxOffset}px)`
           }}
         />
 
