@@ -61,7 +61,7 @@ const WineShowcase = () => {
         <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
       </div>
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8 lg:px-16">
         {wines.map((wine, index) => (
           <div 
             key={wine.id}
@@ -81,10 +81,6 @@ const WineShowcase = () => {
 
             {/* Wine Details */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 font-sans">
-                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && wine.category !== "History" && wine.category !== "About" && <span className="text-wine-slate/60">- Coming Soon</span>}
-              </p>
-              
               <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
                 {wine.name}
               </h2>
