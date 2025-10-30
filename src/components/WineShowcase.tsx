@@ -1,5 +1,5 @@
 import homeTeam from "@/assets/home-team.png";
-import wineCabernet from "@/assets/wine-bottle-cab.png";
+import homeOurWines from "@/assets/home-ourwines.png";
 import winePinot from "@/assets/wine-bottle-pn.png";
 import { ArrowRight } from "lucide-react";
 import GrapevineSVG from "@/components/GrapevineSVG";
@@ -16,11 +16,12 @@ const wines = [
   },
   {
     id: 2,
-    image: wineCabernet,
-    category: "Cabernet Sauvignon",
-    name: "Amantes 2025 Cabernet Sauvignon",
-    description: "Bold and structured, our Cabernet Sauvignon features layers of blackcurrant, oak, and spice. This full-bodied wine from Temecula Valley delivers complexity and depth with every sip.",
-    position: "right"
+    image: homeOurWines,
+    category: "Our Wines",
+    name: "Our Wines",
+    description: "Every bottle from Amantes Vineyard tells a story steeped in tradition and crafted with precision. Our collection of kosher wines—from bold reds to crisp whites—reflects three generations of Persian winemaking expertise, grown in California's premium wine country and produced under strict kosher supervision. Each vintage honors ancient methods while embracing modern excellence.",
+    position: "right",
+    link: "/wines"
   },
   {
     id: 3,
@@ -70,7 +71,7 @@ const WineShowcase = () => {
             {/* Wine Details */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 font-sans">
-                {wine.category} {wine.category !== "Team" && <span className="text-wine-slate/60">- Coming Soon</span>}
+                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && <span className="text-wine-slate/60">- Coming Soon</span>}
               </p>
               
               <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
@@ -85,7 +86,9 @@ const WineShowcase = () => {
                 href={wine.link || "/buy-wine"}
                 className="inline-flex items-center gap-2 text-wine-bronze hover:text-wine-gold transition-colors duration-300 group"
               >
-                <span className="tracking-wider uppercase text-sm font-semibold">{wine.link === "/team" ? "Meet the Team" : "Browse Wines"}</span>
+                <span className="tracking-wider uppercase text-sm font-semibold">
+                  {wine.link === "/team" ? "Meet the Team" : wine.link === "/wines" ? "Explore Our Wines" : "Browse Wines"}
+                </span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
               </a>
             </div>
