@@ -11,6 +11,7 @@ import Wines from "./pages/Wines";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
+import AgeVerification from "./components/AgeVerification";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <AgeVerification />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
