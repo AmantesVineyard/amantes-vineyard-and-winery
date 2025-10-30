@@ -112,7 +112,7 @@ const Wines = () => {
           <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
         </div>
         
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8 lg:px-16">
           {wines.map((wine) => (
             <div 
               key={wine.id}
