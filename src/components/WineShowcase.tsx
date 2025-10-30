@@ -52,7 +52,7 @@ const WineShowcase = () => {
   const parallax4 = useParallax(0.6);
 
   return (
-    <section id="wines" className="py-24 bg-wine-cream relative">
+    <section id="wines" className="py-24 bg-wine-cream relative overflow-hidden">
       {/* Decorative Vines Around Wine Showcase */}
       <div 
         className="absolute left-4 top-20 w-16 h-[500px] pointer-events-none hidden md:block"

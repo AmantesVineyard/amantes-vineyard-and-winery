@@ -7,7 +7,7 @@ import GrapevineSVG from "@/components/GrapevineSVG";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-wine-cream">
+    <div className="min-h-screen bg-wine-cream overflow-x-hidden">
       <Navigation />
       <Hero />
       <WineShowcase />
