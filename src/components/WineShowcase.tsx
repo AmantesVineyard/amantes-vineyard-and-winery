@@ -1,6 +1,7 @@
 import homeTeam from "@/assets/home-team.png";
 import homeOurWines from "@/assets/home-ourwines.png";
 import homeHistory from "@/assets/home-history.png";
+import homeAbout from "@/assets/home-about.png";
 import { ArrowRight } from "lucide-react";
 import GrapevineSVG from "@/components/GrapevineSVG";
 
@@ -31,6 +32,15 @@ const wines = [
     description: "From the ancient vineyards of Persia where Jewish winemakers perfected their craft under Cyrus the Great, to the sun-drenched hills of Temecula, discover the remarkable 2,500-year journey that brought kosher winemaking tradition to Southern California. This is the story of resilience, faith, and the timeless art of transforming grapes into sacred wine.",
     position: "left",
     link: "/history"
+  },
+  {
+    id: 4,
+    image: homeAbout,
+    category: "About",
+    name: "About Us",
+    description: "Amantes Vineyard is Temecula's only kosher winery, where three generations of Persian winemaking tradition meet California's premier wine country. Founded on the principles of quality, authenticity, and deep respect for Jewish law, we're committed to producing exceptional mevushal wines that bring people together in celebration, remembrance, and joy.",
+    position: "right",
+    link: "/about"
   }
 ];
 
@@ -72,7 +82,7 @@ const WineShowcase = () => {
             {/* Wine Details */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 font-sans">
-                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && wine.category !== "History" && <span className="text-wine-slate/60">- Coming Soon</span>}
+                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && wine.category !== "History" && wine.category !== "About" && <span className="text-wine-slate/60">- Coming Soon</span>}
               </p>
               
               <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
@@ -88,7 +98,7 @@ const WineShowcase = () => {
                 className="inline-flex items-center gap-2 text-wine-bronze hover:text-wine-gold transition-colors duration-300 group"
               >
                 <span className="tracking-wider uppercase text-sm font-semibold">
-                  {wine.link === "/team" ? "Meet the Team" : wine.link === "/wines" ? "Explore Our Wines" : wine.link === "/history" ? "Discover Our Story" : "Browse Wines"}
+                  {wine.link === "/team" ? "Meet the Team" : wine.link === "/wines" ? "Explore Our Wines" : wine.link === "/history" ? "Discover Our Story" : wine.link === "/about" ? "Learn More" : "Browse Wines"}
                 </span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
               </a>
