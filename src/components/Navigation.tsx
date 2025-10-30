@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ShoppingCart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/assets/amantes-logo.png";
@@ -30,6 +30,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
     { name: "CONTACT", href: "/contact", isRoute: true },
     { name: "ABOUT US", href: "/about", isRoute: true },
     { name: "BUY WINE", href: "/buy-wine", isRoute: true },
+    { name: "BLOG", href: "http://qmf.e83.myftpupload.com", isRoute: false },
   ];
 
   return (
@@ -94,9 +95,6 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
                 </a>
               )
             ))}
-            <button className="text-wine-cream/80 hover:text-wine-bronze transition-colors">
-              <ShoppingCart className="w-5 h-5" />
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
