@@ -74,7 +74,7 @@ const WineShowcase = () => {
                 <img 
                   src={wine.image}
                   alt={wine.name}
-                  className="relative w-80 aspect-[2/3] object-contain transform group-hover:scale-105 transition-transform duration-700"
+                  className="relative w-full max-w-lg h-auto object-contain transform group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
