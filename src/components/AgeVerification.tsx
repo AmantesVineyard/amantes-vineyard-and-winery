@@ -12,15 +12,29 @@ import { Button } from "@/components/ui/button";
 const AgeVerification = () => {
   const [open, setOpen] = useState(false);
 
+  const getCookie = (name: string) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(';').shift();
+    return null;
+  };
+
+  const setCookie = (name: string, value: string, days: number) => {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = `expires=${date.toUTCString()}`;
+    document.cookie = `${name}=${value};${expires};path=/`;
+  };
+
   useEffect(() => {
-    const verified = localStorage.getItem("ageVerified");
+    const verified = getCookie("ageVerified");
     if (!verified) {
       setOpen(true);
     }
   }, []);
 
   const handleYes = () => {
-    localStorage.setItem("ageVerified", "true");
+    setCookie("ageVerified", "true", 365); // Cookie lasts 1 year
     setOpen(false);
   };
 
