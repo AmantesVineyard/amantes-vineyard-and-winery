@@ -1,6 +1,6 @@
 import homeTeam from "@/assets/home-team.png";
 import homeOurWines from "@/assets/home-ourwines.png";
-import winePinot from "@/assets/wine-bottle-pn.png";
+import homeHistory from "@/assets/home-history.png";
 import { ArrowRight } from "lucide-react";
 import GrapevineSVG from "@/components/GrapevineSVG";
 
@@ -25,11 +25,12 @@ const wines = [
   },
   {
     id: 3,
-    image: winePinot,
-    category: "Pinot Noir",
-    name: "Amantes 2025 Pinot Noir",
-    description: "Elegant and refined, our Pinot Noir offers delicate notes of red berries, earth, and subtle oak. Silky smooth with balanced acidity, this wine embodies the essence of California craftsmanship.",
-    position: "left"
+    image: homeHistory,
+    category: "History",
+    name: "History",
+    description: "From the ancient vineyards of Persia where Jewish winemakers perfected their craft under Cyrus the Great, to the sun-drenched hills of Temecula, discover the remarkable 2,500-year journey that brought kosher winemaking tradition to Southern California. This is the story of resilience, faith, and the timeless art of transforming grapes into sacred wine.",
+    position: "left",
+    link: "/history"
   }
 ];
 
@@ -71,7 +72,7 @@ const WineShowcase = () => {
             {/* Wine Details */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <p className="text-sm tracking-[0.3em] text-wine-bronze uppercase mb-4 font-sans">
-                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && <span className="text-wine-slate/60">- Coming Soon</span>}
+                {wine.category} {wine.category !== "Team" && wine.category !== "Our Wines" && wine.category !== "History" && <span className="text-wine-slate/60">- Coming Soon</span>}
               </p>
               
               <h2 className="text-4xl lg:text-5xl font-serif text-wine-deep mb-6 leading-tight">
@@ -87,7 +88,7 @@ const WineShowcase = () => {
                 className="inline-flex items-center gap-2 text-wine-bronze hover:text-wine-gold transition-colors duration-300 group"
               >
                 <span className="tracking-wider uppercase text-sm font-semibold">
-                  {wine.link === "/team" ? "Meet the Team" : wine.link === "/wines" ? "Explore Our Wines" : "Browse Wines"}
+                  {wine.link === "/team" ? "Meet the Team" : wine.link === "/wines" ? "Explore Our Wines" : wine.link === "/history" ? "Discover Our Story" : "Browse Wines"}
                 </span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
               </a>
