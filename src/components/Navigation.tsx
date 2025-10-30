@@ -30,7 +30,7 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
     { name: "CONTACT", href: "/contact", isRoute: true },
     { name: "ABOUT US", href: "/about", isRoute: true },
     { name: "BUY WINE", href: "/buy-wine", isRoute: true },
-    { name: "BLOG", href: "http://qmf.e83.myftpupload.com", isRoute: false },
+    { name: "BLOG", href: "https://amantesvineyard.com/amantes-vineyard-and-winery-temeculas-only-kosher-vineyard-blog/", isRoute: false },
   ];
 
   return (
