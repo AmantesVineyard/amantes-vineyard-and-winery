@@ -4,6 +4,7 @@ import homeHistory from "@/assets/home-history.png";
 import homeAbout from "@/assets/home-about.png";
 import { ArrowRight } from "lucide-react";
 import GrapevineSVG from "@/components/GrapevineSVG";
+import { useParallax } from "@/hooks/use-parallax";
 
 const wines = [
   {
@@ -45,19 +46,36 @@ const wines = [
 ];
 
 const WineShowcase = () => {
+  const parallax1 = useParallax(0.3);
+  const parallax2 = useParallax(0.4);
+  const parallax3 = useParallax(0.5);
+  const parallax4 = useParallax(0.6);
+
   return (
     <section id="wines" className="py-24 bg-wine-cream relative">
       {/* Decorative Vines Around Wine Showcase */}
-      <div className="absolute left-4 top-20 w-16 h-[500px] pointer-events-none hidden md:block">
+      <div 
+        className="absolute left-4 top-20 w-16 h-[500px] pointer-events-none hidden md:block"
+        style={{ transform: `translateY(${parallax1}px)` }}
+      >
         <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
       </div>
-      <div className="absolute right-4 top-40 w-16 h-[500px] pointer-events-none hidden md:block">
+      <div 
+        className="absolute right-4 top-40 w-16 h-[500px] pointer-events-none hidden md:block"
+        style={{ transform: `translateY(${parallax2}px)` }}
+      >
         <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
       </div>
-      <div className="absolute left-8 top-[600px] w-20 h-96 pointer-events-none hidden lg:block">
+      <div 
+        className="absolute left-8 top-[600px] w-20 h-96 pointer-events-none hidden lg:block"
+        style={{ transform: `translateY(${parallax3}px)` }}
+      >
         <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
       </div>
-      <div className="absolute right-8 top-[800px] w-20 h-96 pointer-events-none hidden lg:block">
+      <div 
+        className="absolute right-8 top-[800px] w-20 h-96 pointer-events-none hidden lg:block"
+        style={{ transform: `translateY(${parallax4}px)` }}
+      >
         <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
       </div>
       
