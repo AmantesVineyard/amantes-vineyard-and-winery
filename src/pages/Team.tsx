@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroTeam from "@/components/HeroTeam";
+import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import GrapevineSVG from "@/components/GrapevineSVG";
@@ -117,6 +118,7 @@ const Team = () => {
         </div>
       </section>
 
+      <HanukkahBanner />
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroHistory from "@/components/HeroHistory";
+import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
 import {
@@ -620,6 +621,7 @@ const History = () => {
         </section>
       </main>
 
+      <HanukkahBanner />
       <Footer />
     </div>
   );
