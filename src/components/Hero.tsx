@@ -39,16 +39,6 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8"
             style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}
           />
-          <a 
-            href="https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block hover:scale-105 transition-transform duration-300 mt-[88px] md:mt-[133px] bg-wine-bronze/75 hover:bg-wine-gold/75 px-8 py-4 rounded-2xl shadow-2xl border-2 border-white text-slide-up delay-400"
-          >
-            <p className="text-wine-cream text-lg md:text-xl font-semibold text-center">
-              Hanukkah Gift Collection: 3 Bottles for the Price of 2. Shop Now
-            </p>
-          </a>
         </div>
       </div>
     </section>
