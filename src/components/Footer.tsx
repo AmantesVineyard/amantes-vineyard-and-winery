@@ -151,8 +151,8 @@ const Footer = () => {
                   40420 Calle Concion<br />Temecula, CA 92592
                 </a>
                 <p className="pt-2">
-                  <a href="tel:+19513832223" className="hover:text-wine-bronze transition-colors">
-                    +1 951-383-2223
+                  <a href="tel:+18666573411" className="hover:text-wine-bronze transition-colors">
+                    +1 (866) 657-3411
                   </a>
                 </p>
                 <p>
