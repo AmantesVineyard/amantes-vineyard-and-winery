@@ -9,15 +9,38 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SEO from "@/components/SEO";
+import { BreadcrumbSchema, ArticleSchema } from "@/components/StructuredData";
 
 const History = () => {
   return (
-    <div className="min-h-screen bg-wine-cream">
-      <Navigation />
+    <>
+      <SEO 
+        title="Jewish Winemaking History in Persia | Amantes Vineyard"
+        description="Explore 7,000 years of Persian winemaking history. From ancient Persia to Temecula, discover the Jewish winemaking tradition that inspired Amantes Vineyard."
+        canonical="/history"
+        keywords="Jewish winemaking history, Persian wine, kosher wine tradition, Cyrus the Great wine, Shiraz wine history, Persian Jewish heritage"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "History", url: "/history" }
+      ]} />
+      <ArticleSchema 
+        title="A History of Jewish Wine in Persia"
+        description="From ancient Persia to Temecula: 7,000 years of Jewish winemaking tradition"
+        url="/history"
+        datePublished="2024-01-01"
+      />
       
-      <HeroHistory />
-      
-      <main className="container mx-auto px-4 py-16 max-w-4xl relative">
+      <div className="min-h-screen bg-wine-cream">
+        <a href="#history-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-wine-deep text-white px-4 py-2 z-50">
+          Skip to history content
+        </a>
+        <Navigation />
+        
+        <HeroHistory />
+        
+        <main id="history-content" className="container mx-auto px-4 py-16 max-w-4xl relative">
         {/* Decorative Vines Around Content - Enhanced */}
         <div className="absolute -left-12 top-20 w-32 h-[600px] pointer-events-none hidden md:block">
           <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-80" />
