@@ -13,6 +13,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 const teamMembers = [
   {
@@ -41,86 +43,107 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="bg-wine-cream">
-      <Navigation transparent={true} logoSrc={logoBlue} />
+    <>
+      <SEO 
+        title="Meet Our Team | Amantes Vineyard Winemakers"
+        description="Meet the passionate team behind Amantes Vineyard. Dr. Joseph Nassir, founder with 4 generations of Persian Jewish winemaking heritage, and our dedicated staff."
+        canonical="/team"
+        keywords="Amantes Vineyard team, Dr Joseph Nassir, kosher winemaker, Persian Jewish winemaking, Temecula winery staff"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "Team", url: "/team" }
+      ]} />
       
-      <HeroTeam />
-
-      {/* Team Carousel */}
-      <section className="pt-16 px-4 relative">
-        {/* Decorative Vines Around Content */}
-        <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block">
-          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
-        </div>
-        <div className="absolute right-4 top-32 w-16 h-96 pointer-events-none hidden md:block">
-          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
-        </div>
-        <div className="absolute left-8 top-[600px] w-20 h-80 pointer-events-none hidden lg:block">
-          <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
-        </div>
-        <div className="absolute right-8 top-[800px] w-20 h-80 pointer-events-none hidden lg:block">
-          <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
-        </div>
+      <div className="bg-wine-cream">
+        <a href="#team-section" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-wine-deep text-white px-4 py-2 z-50">
+          Skip to team members
+        </a>
+        <Navigation transparent={true} logoSrc={logoBlue} />
         
-        <div className="container mx-auto max-w-6xl">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 8000,
-              }),
-            ]}
-            className="w-full"
-          >
-            <CarouselContent>
-              {teamMembers.map((member, index) => (
-                <CarouselItem key={index}>
-                  <Card className="border-wine-bronze/20 bg-white/80 backdrop-blur-sm">
-                    <CardContent className="p-8 md:p-12">
-                      <div className="text-center mb-6">
-                        <h2 className="font-serif text-3xl md:text-4xl text-wine-deep mb-2">
-                          {member.name}
-                        </h2>
-                        {member.hebrewName && (
-                          <p className="text-lg text-wine-slate mb-2">
-                            {member.hebrewName}
-                          </p>
-                        )}
-                        <p className="text-xl text-wine-bronze font-medium">
-                          {member.title}
-                        </p>
-                      </div>
-                      
-                      <div className="prose prose-lg max-w-none text-wine-deep/90">
-                        {member.description.split('\n\n').map((paragraph, pIndex) => (
-                          <p key={pIndex} className="mb-4 leading-relaxed">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
+        <HeroTeam />
 
-                      {member.quote && (
-                        <p className="mt-6 text-center text-xl italic text-wine-bronze font-serif">
-                          {member.quote}
-                        </p>
-                      )}
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4 md:-left-12" />
-            <CarouselNext className="right-4 md:-right-12" />
-          </Carousel>
-        </div>
-      </section>
+        {/* Team Carousel */}
+        <main id="team-section" className="pt-16 px-4 relative">
+          <h1 className="sr-only">Amantes Vineyard Winemaking Team</h1>
+          
+          {/* Decorative Vines Around Content */}
+          <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block" aria-hidden="true">
+            <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-60" />
+          </div>
+          <div className="absolute right-4 top-32 w-16 h-96 pointer-events-none hidden md:block" aria-hidden="true">
+            <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-60" />
+          </div>
+          <div className="absolute left-8 top-[600px] w-20 h-80 pointer-events-none hidden lg:block" aria-hidden="true">
+            <GrapevineSVG side="left" className="!w-full !h-full !relative opacity-40" />
+          </div>
+          <div className="absolute right-8 top-[800px] w-20 h-80 pointer-events-none hidden lg:block" aria-hidden="true">
+            <GrapevineSVG side="right" className="!w-full !h-full !relative opacity-40" />
+          </div>
+          
+          <section className="container mx-auto max-w-6xl" aria-label="Team member profiles">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 8000,
+                }),
+              ]}
+              className="w-full"
+              aria-label="Team members carousel"
+            >
+              <CarouselContent>
+                {teamMembers.map((member, index) => (
+                  <CarouselItem key={index}>
+                    <Card className="border-wine-bronze/20 bg-white/80 backdrop-blur-sm">
+                      <CardContent className="p-8 md:p-12">
+                        <article>
+                          <header className="text-center mb-6">
+                            <h2 className="font-serif text-3xl md:text-4xl text-wine-deep mb-2">
+                              {member.name}
+                            </h2>
+                            {member.hebrewName && (
+                              <p className="text-lg text-wine-slate mb-2" lang="he">
+                                {member.hebrewName}
+                              </p>
+                            )}
+                            <p className="text-xl text-wine-bronze font-medium">
+                              {member.title}
+                            </p>
+                          </header>
+                          
+                          <div className="prose prose-lg max-w-none text-wine-deep/90">
+                            {member.description.split('\n\n').map((paragraph, pIndex) => (
+                              <p key={pIndex} className="mb-4 leading-relaxed">
+                                {paragraph}
+                              </p>
+                            ))}
+                          </div>
 
-      <HanukkahBanner />
-      <Footer />
-    </div>
+                          {member.quote && (
+                            <blockquote className="mt-6 text-center text-xl italic text-wine-bronze font-serif">
+                              {member.quote}
+                            </blockquote>
+                          )}
+                        </article>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 md:-left-12" aria-label="Previous team member" />
+              <CarouselNext className="right-4 md:-right-12" aria-label="Next team member" />
+            </Carousel>
+          </section>
+        </main>
+
+        <HanukkahBanner />
+        <Footer />
+      </div>
+    </>
   );
 };
 
