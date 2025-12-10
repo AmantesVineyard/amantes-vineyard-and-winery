@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import SEO from "@/components/SEO";
-import { BreadcrumbSchema } from "@/components/StructuredData";
+import { BreadcrumbSchema, WebPageSchema, PersonSchema } from "@/components/StructuredData";
 
 const teamMembers = [
   {
@@ -45,15 +45,25 @@ const Team = () => {
   return (
     <>
       <SEO 
-        title="Meet Our Team | Amantes Vineyard Winemakers"
-        description="Meet the passionate team behind Amantes Vineyard. Dr. Joseph Nassir, founder with 4 generations of Persian Jewish winemaking heritage, and our dedicated staff."
+        title="Meet Our Team | Amantes Vineyard Winemakers & Staff"
+        description="Meet the passionate team behind Amantes Vineyard. Dr. Joseph Nassir, founder with 4 generations of Persian Jewish winemaking heritage, leads our dedicated staff."
         canonical="/team"
-        keywords="Amantes Vineyard team, Dr Joseph Nassir, kosher winemaker, Persian Jewish winemaking, Temecula winery staff"
+        keywords="Amantes Vineyard team, Dr Joseph Nassir, kosher winemaker, Persian Jewish winemaking, Temecula winery staff, Rabbi Berkowitz mashgiach"
       />
       <BreadcrumbSchema items={[
         { name: "Home", url: "/" },
         { name: "Team", url: "/team" }
       ]} />
+      <WebPageSchema 
+        name="Our Team"
+        description="Meet the passionate winemakers and staff behind Amantes Vineyard."
+        url="/team"
+      />
+      <PersonSchema people={teamMembers.map(member => ({
+        name: member.name,
+        jobTitle: member.title,
+        description: member.description.split('\n\n')[0]
+      }))} />
       
       <div className="bg-wine-cream">
         <a href="#team-section" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-wine-deep text-white px-4 py-2 z-50">
@@ -65,7 +75,12 @@ const Team = () => {
 
         {/* Team Carousel */}
         <main id="team-section" className="pt-16 px-4 relative">
-          <h1 className="sr-only">Amantes Vineyard Winemaking Team</h1>
+          <div className="container mx-auto max-w-4xl mb-12 text-center">
+            <h1 className="text-4xl md:text-5xl font-serif text-wine-deep mb-6">Meet Our Winemaking Team</h1>
+            <p className="text-lg text-wine-slate/80 leading-relaxed">
+              Behind every bottle of Amantes wine is a team of dedicated professionals who share a passion for quality, tradition, and the art of kosher winemaking. From our founder Dr. Joseph Nassir to our supervising Rabbi, each team member brings unique expertise and devotion to our craft.
+            </p>
+          </div>
           
           {/* Decorative Vines Around Content */}
           <div className="absolute left-4 top-10 w-16 h-96 pointer-events-none hidden md:block" aria-hidden="true">
@@ -100,9 +115,9 @@ const Team = () => {
                   <CarouselItem key={index}>
                     <Card className="border-wine-bronze/20 bg-white/80 backdrop-blur-sm">
                       <CardContent className="p-8 md:p-12">
-                        <article>
+                        <article itemScope itemType="https://schema.org/Person">
                           <header className="text-center mb-6">
-                            <h2 className="font-serif text-3xl md:text-4xl text-wine-deep mb-2">
+                            <h2 className="font-serif text-3xl md:text-4xl text-wine-deep mb-2" itemProp="name">
                               {member.name}
                             </h2>
                             {member.hebrewName && (
@@ -110,12 +125,12 @@ const Team = () => {
                                 {member.hebrewName}
                               </p>
                             )}
-                            <p className="text-xl text-wine-bronze font-medium">
+                            <p className="text-xl text-wine-bronze font-medium" itemProp="jobTitle">
                               {member.title}
                             </p>
                           </header>
                           
-                          <div className="prose prose-lg max-w-none text-wine-deep/90">
+                          <div className="prose prose-lg max-w-none text-wine-deep/90" itemProp="description">
                             {member.description.split('\n\n').map((paragraph, pIndex) => (
                               <p key={pIndex} className="mb-4 leading-relaxed">
                                 {paragraph}
