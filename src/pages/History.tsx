@@ -647,6 +647,7 @@ const History = () => {
       <HanukkahBanner />
       <Footer />
     </div>
+    </>
   );
 };
 
