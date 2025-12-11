@@ -18,7 +18,7 @@ const contactFAQs = [
   },
   {
     question: "How can I schedule a wine tasting at Amantes Vineyard?",
-    answer: "You can schedule a wine tasting by calling us at +1 (866) 657-3411 or emailing info@amantesvineyard.com. We offer private tastings and group events at our Temecula Valley location."
+    answer: "You can schedule a wine tasting by calling us at +1 (866) 657-3411 or emailing amantes@amantesvineyard.com. We offer private tastings and group events at our Temecula Valley location."
   },
   {
     question: "Does Amantes Vineyard ship wine?",
@@ -38,7 +38,7 @@ const ContactPageSchema = () => {
       "@type": "LocalBusiness",
       "name": "Amantes Vineyard and Winery",
       "telephone": "+1-866-657-3411",
-      "email": "info@amantesvineyard.com",
+      "email": "amantes@amantesvineyard.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "40420 Calle Concion",
@@ -84,7 +84,7 @@ const Contact = () => {
     <>
       <SEO 
         title="Contact Amantes Vineyard | Temecula Kosher Winery"
-        description="Contact Amantes Vineyard for wine tastings, events, and inquiries. Visit Temecula's only kosher vineyard. Call +1 (866) 657-3411 or email info@amantesvineyard.com."
+        description="Contact Amantes Vineyard for wine tastings, events, and inquiries. Visit Temecula's only kosher vineyard. Call +1 (866) 657-3411 or email amantes@amantesvineyard.com."
         canonical="/contact"
         keywords="contact Amantes Vineyard, Temecula winery phone, kosher wine tasting, wine events Temecula, visit Amantes winery"
       />
@@ -194,11 +194,11 @@ const Contact = () => {
                   Email
                 </h3>
                 <a 
-                  href="mailto:info@amantesvineyard.com" 
+                  href="mailto:amantes@amantesvineyard.com" 
                   className="text-wine-slate/80 hover:text-wine-bronze transition-colors text-sm"
                   aria-label="Email Amantes Vineyard"
                 >
-                  info@amantesvineyard.com
+                  amantes@amantesvineyard.com
                 </a>
               </article>
               
@@ -231,7 +231,7 @@ const Contact = () => {
                 Send Us a Message
               </h3>
               
-              <form className="space-y-6" aria-label="Contact form" action="mailto:info@amantesvineyard.com" method="POST" encType="text/plain">
+              <form className="space-y-6" aria-label="Contact form" action="mailto:amantes@amantesvineyard.com" method="POST" encType="text/plain">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-wine-deep mb-2 font-medium">
