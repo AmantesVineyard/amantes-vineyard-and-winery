@@ -93,7 +93,7 @@ const Index = () => {
                 <article className="text-center p-6">
                   <h3 className="text-xl font-serif text-wine-deep mb-4">Certified Kosher</h3>
                   <p className="text-wine-slate/80">
-                    All wines produced under strict rabbinical supervision. Our mevushal wines maintain their kosher status regardless of who handles them.
+                    All of our wines are handcrafted under strict mashkiach supervision delivering the most authentic kosher experience.
                   </p>
                 </article>
                 <article className="text-center p-6">
