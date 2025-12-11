@@ -43,7 +43,7 @@ export const WinerySchema = () => {
     "description": "Temecula's only kosher vineyard offering premium kosher wines crafted with Persian Jewish winemaking traditions spanning three generations.",
     "url": "https://amantesvineyard.com",
     "telephone": "+1-866-657-3411",
-    "email": "info@amantesvineyard.com",
+    "email": "amantes@amantesvineyard.com",
     "foundingDate": "2019",
     "founder": {
       "@type": "Person",
@@ -174,7 +174,7 @@ export const OrganizationSchema = () => {
         "@type": "ContactPoint",
         "telephone": "+1-866-657-3411",
         "contactType": "customer service",
-        "email": "info@amantesvineyard.com",
+        "email": "amantes@amantesvineyard.com",
         "availableLanguage": ["English", "Persian", "Hebrew"],
         "areaServed": "US"
       },
@@ -182,7 +182,7 @@ export const OrganizationSchema = () => {
         "@type": "ContactPoint",
         "telephone": "+1-866-657-3411",
         "contactType": "sales",
-        "email": "info@amantesvineyard.com",
+        "email": "amantes@amantesvineyard.com",
         "availableLanguage": ["English"]
       }
     ],
