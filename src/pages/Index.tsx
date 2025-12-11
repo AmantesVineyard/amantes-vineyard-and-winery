@@ -17,7 +17,7 @@ const homepageFAQs = [
   },
   {
     question: "What types of kosher wine does Amantes Vineyard produce?",
-    answer: "Amantes Vineyard specializes in premium kosher Merlot wines, including our 3Girlfriends Limited Reserve, Toi et Moi Merlot, and LeParlay Merlot. All our wines are mevushal and certified kosher."
+    answer: "Amantes Vineyard specializes in premium kosher Merlot wines, including our 3Girlfriends Limited Reserve, Toi et Moi Merlot, and LeParlay Merlot. All our wines are certified kosher."
   },
   {
     question: "Can I visit Amantes Vineyard for wine tasting?",
@@ -36,7 +36,7 @@ const Index = () => {
         title="Amantes Vineyard - Temecula's Only Kosher Winery | Premium Kosher Wines"
         description="Discover Temecula's only kosher vineyard. Experience 3 generations of Persian Jewish winemaking tradition. Premium kosher Merlot and boutique wines in California wine country."
         canonical="/"
-        keywords="kosher winery Temecula, kosher vineyard California, Persian Jewish wine, kosher Merlot, Amantes Vineyard, boutique kosher wines, Temecula wine country, mevushal wine, kosher wine shop, Jewish winery"
+        keywords="kosher winery Temecula, kosher vineyard California, Persian Jewish wine, kosher Merlot, Amantes Vineyard, boutique kosher wines, Temecula wine country, kosher wine shop, Jewish winery"
       />
       <WebSiteSchema />
       <WinerySchema />

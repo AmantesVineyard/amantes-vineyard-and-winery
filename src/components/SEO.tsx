@@ -22,7 +22,7 @@ const SEO = ({
   type = 'website',
   image = "https://storage.googleapis.com/gpt-engineer-file-uploads/1ebL5HwaQgY83LZ2gT4mBB6wnBQ2/social-images/social-1761203871034-FB-icon-AmantesLogo-Bluebg.png",
   imageAlt = "Amantes Vineyard and Winery - Premium Kosher Wines from Temecula",
-  keywords = "kosher wine, Temecula winery, kosher vineyard, Persian Jewish wine, kosher Merlot, California kosher wine, boutique winery, kosher wine Temecula, Jewish winery, mevushal wine",
+  keywords = "kosher wine, Temecula winery, kosher vineyard, Persian Jewish wine, kosher Merlot, California kosher wine, boutique winery, kosher wine Temecula, Jewish winery",
   noIndex = false,
   author = "Amantes Vineyard and Winery",
   publishedTime,
