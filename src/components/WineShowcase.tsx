@@ -46,7 +46,7 @@ const sections = [
     imageAlt: "Amantes Vineyard estate in Temecula Valley California wine country",
     category: "About Us",
     name: "About Amantes Vineyard & Winery",
-    description: "Amantes Vineyard is Temecula's only kosher winery, where three generations of Persian winemaking tradition meet California's premier wine country. Founded on the principles of quality, authenticity, and deep respect for Jewish law, we're committed to producing exceptional mevushal wines that bring people together in celebration, remembrance, and joy.",
+    description: "Amantes Vineyard is Temecula's only kosher winery, where three generations of Persian winemaking tradition meet California's premier wine country. Founded on the principles of quality, authenticity, and deep respect for Jewish law, we're committed to producing exceptional kosher wines that bring people together in celebration, remembrance, and joy.",
     position: "right",
     link: "/about",
     linkText: "Learn More About Us"
