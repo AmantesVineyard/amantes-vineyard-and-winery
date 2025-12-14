@@ -21,7 +21,7 @@ const homepageFAQs = [
   },
   {
     question: "Can I visit Amantes Vineyard for wine tasting?",
-    answer: "Yes! Amantes Vineyard welcomes visitors for wine tastings in beautiful Temecula Valley wine country. Contact us at +1 (866) 657-3411 or email amantes@amantesvineyard.com to schedule your visit."
+    answer: "Yes! Amantes Vineyard welcomes visitors for wine tastings in beautiful Temecula Valley wine country. Contact us at 1(866)657-3411 or email amantes@amantesvineyard.com to schedule your visit."
   },
   {
     question: "What is the history behind Amantes Vineyard?",
