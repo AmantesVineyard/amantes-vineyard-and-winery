@@ -18,7 +18,7 @@ const contactFAQs = [
   },
   {
     question: "How can I schedule a wine tasting at Amantes Vineyard?",
-    answer: "You can schedule a wine tasting by calling us at +1 (866) 657-3411 or emailing amantes@amantesvineyard.com. We offer private tastings and group events at our Temecula Valley location."
+    answer: "You can schedule a wine tasting by calling us at 1(866)657-3411 or emailing amantes@amantesvineyard.com. We offer private tastings and group events at our Temecula Valley location."
   },
   {
     question: "Does Amantes Vineyard ship wine?",
@@ -84,7 +84,7 @@ const Contact = () => {
     <>
       <SEO 
         title="Contact Amantes Vineyard | Temecula Kosher Winery"
-        description="Contact Amantes Vineyard for wine tastings, events, and inquiries. Visit Temecula's only kosher vineyard. Call +1 (866) 657-3411 or email amantes@amantesvineyard.com."
+        description="Contact Amantes Vineyard for wine tastings, events, and inquiries. Visit Temecula's only kosher vineyard. Call 1(866)657-3411 or email amantes@amantesvineyard.com."
         canonical="/contact"
         keywords="contact Amantes Vineyard, Temecula winery phone, kosher wine tasting, wine events Temecula, visit Amantes winery"
       />
@@ -184,7 +184,7 @@ const Contact = () => {
                   className="text-wine-slate/80 hover:text-wine-bronze transition-colors"
                   aria-label="Call Amantes Vineyard at 1-866-657-3411"
                 >
-                  +1 (866) 657-3411
+                  1(866)657-3411
                 </a>
               </article>
               
