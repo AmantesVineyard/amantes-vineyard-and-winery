@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
 import wineHannuka from "@/assets/wine-hannuka.png";
@@ -189,7 +188,6 @@ const Wines = () => {
           </div>
         </main>
 
-        <HanukkahBanner />
         <Footer />
       </div>
     </>

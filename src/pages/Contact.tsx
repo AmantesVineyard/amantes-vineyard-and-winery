@@ -1,5 +1,4 @@
 import Navigation from "@/components/Navigation";
-import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
 import heroContactImage from "@/assets/hero-contact-2.png";
@@ -318,7 +317,6 @@ const Contact = () => {
           </div>
         </main>
 
-        <HanukkahBanner />
         <Footer />
       </div>
     </>

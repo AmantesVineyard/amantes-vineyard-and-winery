@@ -1,7 +1,6 @@
 import heroImage from "@/assets/hero-home.png";
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
-import hanukkahBanner from "@/assets/hanukkah-banner.png";
 import AnimatedText from "./AnimatedText";
 
 const Hero = () => {

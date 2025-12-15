@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroAbout from "@/components/HeroAbout";
-import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import generationsImage from "@/assets/about-images-gens.png";
 import GrapevineSVG from "@/components/GrapevineSVG";
@@ -167,7 +166,6 @@ const About = () => {
           </article>
         </main>
 
-        <HanukkahBanner />
         <Footer />
       </div>
     </>
