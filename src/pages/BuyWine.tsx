@@ -1,5 +1,4 @@
 import Navigation from "@/components/Navigation";
-import HanukkahBanner from "@/components/HanukkahBanner";
 import Footer from "@/components/Footer";
 import { ExternalLink, Wine, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -176,7 +175,6 @@ const BuyWine = () => {
           </div>
         </main>
 
-        <HanukkahBanner />
         <Footer />
       </div>
     </>
