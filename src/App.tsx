@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 import AgeVerification from "./components/AgeVerification";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <AgeVerification />
+        <CookieConsent />
         <BrowserRouter>
           <Routes>
           <Route path="/" element={<Index />} />
