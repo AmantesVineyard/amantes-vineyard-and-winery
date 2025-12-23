@@ -1,4 +1,4 @@
-import heroAboutImage from "@/assets/hero-3gen-about.png";
+import heroAboutImage from "@/assets/hero-3gen-about.webp";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
 import { useParallax } from "@/hooks/use-parallax";
 import AnimatedText from "./AnimatedText";
