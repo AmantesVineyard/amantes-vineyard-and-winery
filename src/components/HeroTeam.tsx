@@ -1,6 +1,6 @@
 import { useParallax } from "@/hooks/use-parallax";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
-import heroTeamImage from "@/assets/hero-team-single.png";
+import heroTeamImage from "@/assets/hero-team-single.webp";
 import AnimatedText from "./AnimatedText";
 
 const HeroTeam = () => {

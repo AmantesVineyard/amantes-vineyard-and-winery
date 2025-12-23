@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ExternalLink, Wine, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-buy-wine.png";
+import heroImage from "@/assets/hero-buy-wine.webp";
 import { useParallax } from "@/hooks/use-parallax";
 import GrapevineSVG from "@/components/GrapevineSVG";
 import heroWaveBorder from "@/assets/hero-wave-border.svg";
