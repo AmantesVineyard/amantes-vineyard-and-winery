@@ -67,6 +67,8 @@ const Navigation = ({ transparent = false, logoSrc }: NavigationProps) => {
             <img 
               src={(transparent && isScrolled) ? logo : (logoSrc || logo)}
               alt="Amantes Winery"
+              width={111}
+              height={80}
               className="h-16 lg:h-20 w-auto transition-opacity duration-300"
               style={{ filter: 'drop-shadow(0 2px 1px rgba(0, 0, 0, 0.85))' }}
             />
