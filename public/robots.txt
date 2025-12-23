@@ -1,5 +1,5 @@
 # Amantes Vineyard and Winery - robots.txt
-# https://amantesvineyard.com
+# https://love.amantesvineyard.com
 
 User-agent: Googlebot
 Allow: /
@@ -31,7 +31,7 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location
-Sitemap: https://amantesvineyard.com/sitemap.xml
+Sitemap: https://love.amantesvineyard.com/sitemap.xml
 
 # Block sensitive directories
 Disallow: /api/
