@@ -40,6 +40,8 @@ const Footer = () => {
               <img 
                 src={logo}
                 alt="Amantes Winery"
+                width={192}
+                height={111}
                 className="w-48 h-auto mb-6"
               />
               {/* Social Icons */}
