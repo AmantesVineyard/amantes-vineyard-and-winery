@@ -16,15 +16,6 @@ import { BreadcrumbSchema, WineProductSchema } from "@/components/StructuredData
 
 const wines = [
   {
-    id: 1,
-    image: wineHannuka,
-    category: "Special Collection",
-    name: "Hanukkah Gift Collection",
-    description: "Limited Time 🕎 Hanukkah 🕎 Offer! Celebrate the Festival of Lights with Temecula's ONE & ONLY kosher vineyard! Only available while supplies last.",
-    position: "left",
-    link: "https://amantesvineyard.orderport.net/product-details/0014/Hanukkah-Gift-Collection"
-  },
-  {
     id: 2,
     image: wineTem,
     category: "Merlot",
