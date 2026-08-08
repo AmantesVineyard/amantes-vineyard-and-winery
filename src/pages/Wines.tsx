@@ -13,6 +13,7 @@ import { useParallax } from "@/hooks/use-parallax";
 import AnimatedText from "@/components/AnimatedText";
 import SEO from "@/components/SEO";
 import { BreadcrumbSchema, WineProductSchema } from "@/components/StructuredData";
+import { useElevintCatalog } from "@/hooks/use-elevint-catalog";
 
 const wines = [
   {
@@ -21,8 +22,7 @@ const wines = [
     category: "Merlot",
     name: "Toi et Moi 2022 Merlot",
     description: "Our Temecula Valley Merlot is a handcrafted Kosher Reserve showcasing rich, velvety flavors with notes of dark cherry and plum. Smooth tannins and a lingering finish make this an exceptional choice for any occasion.",
-    position: "right",
-    link: "https://amantesvineyard.orderport.net/product-details/0003/Toi-et-Moi-2022-Merlot"
+    position: "right"
   },
   {
     id: 3,
@@ -30,8 +30,7 @@ const wines = [
     category: "Merlot",
     name: "LeParlay 2022 Merlot",
     description: "A sophisticated Merlot that embodies the perfect balance of fruit and oak. Rich flavors and smooth texture make this wine ideal for special occasions and memorable moments.",
-    position: "left",
-    link: "https://amantesvineyard.orderport.net/product-details/0004/LeParlay-2022-Merlot"
+    position: "left"
   },
   {
     id: 4,
@@ -39,8 +38,7 @@ const wines = [
     category: "Merlot",
     name: "3Girlfriends 2021 Merlot",
     description: "Named in honor of three special friendships, this Merlot delivers complex flavors with a smooth, elegant finish. Perfect for sharing with those who matter most.",
-    position: "right",
-    link: "https://amantesvineyard.orderport.net/product-details/0005/3Girlfriends-2021-Merlot"
+    position: "right"
   },
   {
     id: 5,
@@ -48,13 +46,15 @@ const wines = [
     category: "Merlot - Limited Reserve",
     name: "3Girlfriends 2020 Merlot Limited Reserve",
     description: "Our premium Limited Reserve showcases the finest expression of our craft. This exceptional vintage offers deep complexity, refined tannins, and a luxurious finish that lingers beautifully.",
-    position: "left",
-    link: "https://amantesvineyard.orderport.net/product-details/0001/3Girlfriends-2020-Merlot-Limited-Reserve"
+    position: "left"
   }
 ];
 
 const Wines = () => {
   const parallaxOffset = useParallax(0.5);
+  // Price and purchase link come from the winery's live EleVint catalog;
+  // photography and copy stay curated here.
+  const { lookup, buyUrl } = useElevintCatalog();
 
   return (
     <>
@@ -72,7 +72,7 @@ const Wines = () => {
         name: wine.name,
         description: wine.description,
         image: wine.image,
-        url: wine.link,
+        url: `https://love.amantesvineyard.com/wines`,
         category: wine.category
       }))} />
       
@@ -163,14 +163,20 @@ const Wines = () => {
                     {wine.description}
                   </p>
 
-                  <a 
-                    href={wine.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  {lookup(wine.name)?.price != null && (
+                    <p className="text-2xl font-serif text-wine-deep mb-6">
+                      ${lookup(wine.name)!.price.toFixed(2)}
+                    </p>
+                  )}
+
+                  <a
+                    href={buyUrl(wine.name) ?? "/buy-wine"}
                     className="inline-flex items-center gap-2 text-wine-bronze hover:text-wine-gold transition-colors duration-300 group"
-                    aria-label={`Shop ${wine.name} kosher wine`}
+                    aria-label={`Buy ${wine.name} kosher wine`}
                   >
-                    <span className="tracking-wider uppercase text-sm font-semibold">Discover This Wine</span>
+                    <span className="tracking-wider uppercase text-sm font-semibold">
+                      {buyUrl(wine.name) ? "Add to Cart" : "Discover This Wine"}
+                    </span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
                   </a>
                 </div>

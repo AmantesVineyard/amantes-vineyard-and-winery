@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Wine, ShieldCheck, Truck } from "lucide-react";
+import { ArrowRight, Wine, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-buy-wine.webp";
 import { useParallax } from "@/hooks/use-parallax";
@@ -130,28 +130,22 @@ const BuyWine = () => {
                 Browse Our Wine Collection
               </h2>
               <p className="text-lg text-wine-slate/80 mb-8 leading-relaxed">
-                Experience the finest kosher wines from Amantes Vineyard. 
-                Our online store powered by Orderport makes it easy to explore our collection 
-                and have your favorite wines delivered to your home.
+                Experience the finest kosher wines from Amantes Vineyard.
+                Browse our collection and have your favorite wines delivered to your home.
               </p>
-              
-              <a
-                href="https://amantesvineyard.orderport.net/wines/Our-Wines"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Button 
+
+              <a href="/wines" className="inline-block">
+                <Button
                   size="lg"
                   className="bg-wine-bronze hover:bg-wine-gold text-white px-12 py-6 text-base tracking-wider uppercase group"
                 >
                   <span>Shop Our Wines</span>
-                  <ExternalLink className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Button>
               </a>
-              
+
               <p className="text-sm text-wine-slate/60 mt-6">
-                You'll be redirected to our secure Orderport store
+                Secure checkout &middot; Adult signature (21+) required on delivery
               </p>
             </section>
 
