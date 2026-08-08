@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
-import wineHannuka from "@/assets/wine-hannuka.png";
 import wineTem from "@/assets/wine-tem.png";
 import wineLeparlay from "@/assets/wine-leparlay.png";
 import wine3gf2021 from "@/assets/wine-3gf-2021.png";
@@ -13,48 +12,88 @@ import { useParallax } from "@/hooks/use-parallax";
 import AnimatedText from "@/components/AnimatedText";
 import SEO from "@/components/SEO";
 import { BreadcrumbSchema, WineProductSchema } from "@/components/StructuredData";
-import { useElevintCatalog } from "@/hooks/use-elevint-catalog";
+import { useElevintCatalog, sortForDisplay } from "@/hooks/use-elevint-catalog";
 
-const wines = [
-  {
-    id: 2,
+/**
+ * Hand-written copy and in-repo photography for wines that have them. Anything
+ * not listed here still appears, using its catalog details — so adding a wine in
+ * EleVint puts it on this page without a code change.
+ */
+const CURATED: Record<string, { description: string; image?: string; category?: string }> = {
+  "Toi et Moi 2022 Merlot": {
     image: wineTem,
     category: "Merlot",
-    name: "Toi et Moi 2022 Merlot",
     description: "Our Temecula Valley Merlot is a handcrafted Kosher Reserve showcasing rich, velvety flavors with notes of dark cherry and plum. Smooth tannins and a lingering finish make this an exceptional choice for any occasion.",
-    position: "right"
   },
-  {
-    id: 3,
+  "LeParlay 2022 Merlot": {
     image: wineLeparlay,
     category: "Merlot",
-    name: "LeParlay 2022 Merlot",
     description: "A sophisticated Merlot that embodies the perfect balance of fruit and oak. Rich flavors and smooth texture make this wine ideal for special occasions and memorable moments.",
-    position: "left"
   },
-  {
-    id: 4,
+  "3Girlfriends 2021 Merlot": {
     image: wine3gf2021,
     category: "Merlot",
-    name: "3Girlfriends 2021 Merlot",
     description: "Named in honor of three special friendships, this Merlot delivers complex flavors with a smooth, elegant finish. Perfect for sharing with those who matter most.",
-    position: "right"
   },
-  {
-    id: 5,
+  "3Girlfriends 2020 Merlot Limited Reserve": {
     image: wine3gf2020,
     category: "Merlot - Limited Reserve",
-    name: "3Girlfriends 2020 Merlot Limited Reserve",
     description: "Our premium Limited Reserve showcases the finest expression of our craft. This exceptional vintage offers deep complexity, refined tannins, and a luxurious finish that lingers beautifully.",
-    position: "left"
-  }
+  },
+};
+
+/** Shown until the catalog responds, so the page never paints empty. */
+const FALLBACK = [
+  "Toi et Moi 2022 Merlot",
+  "LeParlay 2022 Merlot",
+  "3Girlfriends 2021 Merlot",
+  "3Girlfriends 2020 Merlot Limited Reserve",
 ];
+
+interface DisplayWine {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  image: string;
+  price: number | null;
+  position: "left" | "right";
+}
+
+function describe(name: string, varietal?: string, vintage?: number): string {
+  const curated = CURATED[name]?.description;
+  if (curated) return curated;
+  const style = varietal ?? "wine";
+  return `A kosher ${style.toLowerCase()}${vintage ? ` from our ${vintage} harvest` : ""}, grown and produced at our Temecula Valley estate under strict kosher supervision.`;
+}
 
 const Wines = () => {
   const parallaxOffset = useParallax(0.5);
-  // Price and purchase link come from the winery's live EleVint catalog;
-  // photography and copy stay curated here.
-  const { lookup, buyUrl } = useElevintCatalog();
+  // The range, pricing, photography and purchase links all come from the live
+  // EleVint catalog; hand-written copy above overrides where it exists.
+  const { all, buyUrl, loaded } = useElevintCatalog();
+
+  const catalog = sortForDisplay(all());
+  const wines: DisplayWine[] =
+    catalog.length > 0
+      ? catalog.map((w, i) => ({
+          id: w.id,
+          name: w.name,
+          category: CURATED[w.name]?.category ?? w.varietal ?? w.type ?? "Kosher Wine",
+          description: describe(w.name, w.varietal, w.vintage),
+          image: CURATED[w.name]?.image ?? w.image ?? "",
+          price: w.price ?? null,
+          position: i % 2 === 0 ? "right" : "left",
+        }))
+      : FALLBACK.map((name, i) => ({
+          id: name,
+          name,
+          category: CURATED[name]?.category ?? "Merlot",
+          description: CURATED[name]!.description,
+          image: CURATED[name]?.image ?? "",
+          price: null,
+          position: i % 2 === 0 ? "right" : "left",
+        }));
 
   return (
     <>
@@ -163,9 +202,9 @@ const Wines = () => {
                     {wine.description}
                   </p>
 
-                  {lookup(wine.name)?.price != null && (
+                  {wine.price != null && (
                     <p className="text-2xl font-serif text-wine-deep mb-6">
-                      ${lookup(wine.name)!.price.toFixed(2)}
+                      ${wine.price.toFixed(2)}
                     </p>
                   )}
 

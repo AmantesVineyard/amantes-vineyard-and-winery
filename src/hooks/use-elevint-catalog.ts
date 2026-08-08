@@ -18,6 +18,33 @@ export interface CatalogWine {
   price: number;
   vintage?: number;
   varietal?: string;
+  /** Bottle photography, served from our own CDN. */
+  image?: string;
+  /** Red | White | Rosé | Sparkling */
+  type?: string;
+}
+
+/** Sparkling first, then whites, then reds — a tasting-order progression. */
+const TYPE_ORDER: Record<string, number> = {
+  sparkling: 0,
+  white: 1,
+  'rosé': 2,
+  rose: 2,
+  red: 3,
+};
+
+/**
+ * Presentation order for the full range: by style, then ascending price, so the
+ * list builds toward the flagship reserve rather than opening on it.
+ */
+export function sortForDisplay(wines: CatalogWine[]): CatalogWine[] {
+  return [...wines].sort((a, b) => {
+    const ta = TYPE_ORDER[(a.type ?? '').toLowerCase()] ?? 9;
+    const tb = TYPE_ORDER[(b.type ?? '').toLowerCase()] ?? 9;
+    if (ta !== tb) return ta - tb;
+    if (a.price !== b.price) return a.price - b.price;
+    return a.name.localeCompare(b.name);
+  });
 }
 
 /** Normalise for matching: case, punctuation and spacing shouldn't break a join. */
