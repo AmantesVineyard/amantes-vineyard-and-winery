@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WineShowcase from "@/components/WineShowcase";
+import ClubInvitation from "@/components/ClubInvitation";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import GrapevineSVG from "@/components/GrapevineSVG";
@@ -81,7 +82,12 @@ const Index = () => {
           </section>
 
           <WineShowcase />
-          
+
+          {/* The club, asked for straight after the wines and their prices —
+              the point at which a visitor already knows what they would be
+              buying. */}
+          <ClubInvitation />
+
           {/* Why Choose Kosher Wine Section */}
           <section className="py-20 bg-white" aria-labelledby="why-kosher">
             <div className="container mx-auto px-8 lg:px-16 max-w-5xl">

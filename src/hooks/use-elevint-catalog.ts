@@ -11,6 +11,16 @@ import { useEffect, useState } from "react";
 const ELEVINT_ORIGIN = "https://shop.elevint.co";
 const WINERY_SLUG = "amantes-vineyard";
 
+/**
+ * Wine club signup, on the platform, carrying our tenant.
+ *
+ * `?winery=` is the same hand-off `buyUrl` builds below. This site is a
+ * separate deployment, so the signup page has no hostname to work out whose
+ * club to show and has to be told which winery it is enrolling into. Declared
+ * here so the origin and the slug keep one home.
+ */
+export const CLUB_SIGNUP_URL = `${ELEVINT_ORIGIN}/club?winery=${WINERY_SLUG}`;
+
 export interface CatalogWine {
   id: string;
   variantId: string | null;
